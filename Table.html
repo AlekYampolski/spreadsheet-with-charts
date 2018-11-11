@@ -1,0 +1,936 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <title>StatPlus</title>
+
+    <link href="./Styles/gcspread.sheets.excel2016colorful.9.40.20161.0.css" rel="stylesheet" />
+    <link href="./Styles/TableIndex.css" rel="stylesheet" />
+
+    <link href="./Styles/font-awesome.min.css" rel="stylesheet" />
+
+    <link href="./Styles/OfficeUI.Menu.css" rel="stylesheet" />
+    
+    <link href="./Styles/colpick.css" rel="stylesheet" />
+    <!-- Required stylesheets for charts -->
+    <link href="./Styles/d3ChartGear.css" rel="stylesheet" type="text/css">
+    <!-- Uikit stylesheets -->
+    <link href="./Styles/uikit.gradient.min.css" rel="stylesheet" type="text/css">
+
+    <link href="./Styles/spread6.css" rel="stylesheet" type="text/css">
+
+    <!-- IMG -->
+    <link href="./Styles/images_toolbar.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div id="OfficeUI" class="pusher">
+        <input id="styleElem" type="text" />
+        <div id="formulaBar" class="formulaBarConteiner">
+            <table>
+                <tr>
+                    <td width="10%">
+                        <input id="positionbox" type="text" readonly />
+                    </td>
+                    <td class="noselect">
+                        <img id="office-splitter" alt=":" />
+                    </td>
+                    <td width="90%">
+                        <div class="formulaBox" id="formulabox" contenteditable="true" spellcheck="false"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div id="ss"></div>
+        <div class="rightMenuPanel noselect" id="editPanel">
+            <div class="submenu doublePadding">
+                <span class="title" data-lockey-innerhtml="ui.label.fillvals">Fill</span>
+                <ul id="fill" class="btnGroup">
+                    <li data-lockey-tooltip="ui.hint.fillDown">
+                        <div id="fillDown" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.fillRight">
+                        <div id="fillRight" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.fillUp">
+                        <div id="fillUp" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.fillLeft">
+                        <div id="fillLeft" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu">
+                <span class="title" data-lockey-innerhtml="ui.label.formula">Formula</span>
+                <div id="autoFormula" class="icongroup">
+                    <div class="contextMenu smallicon uk-button uk-button-mini hidden-btn icon">
+                        <div class="iconlegend" id="rmn-formula">
+                            <img>
+                            <i class="fa fa-caret-down"></i>
+                        </div>
+                        <div class="menu">
+                            <div class="menucontents">
+                                <ul>
+                                    <li data-lockey-tooltip="ui.hint.autoSum" id="autoSum" class="menuEntry">
+                                        <div data-lockey-innerhtml="ui.label.autoSum" class="menuItem">Sum</div>
+                                    </li>
+                                    <li data-lockey-tooltip="ui.hint.autoAverage" id="autoAverage" class="menuEntry">
+                                        <div data-lockey-innerhtml="ui.label.autoAverage" class="menuItem">Average</div>
+                                    </li>
+                                    <li data-lockey-tooltip="ui.hint.autoCount" id="autoCount" class="menuEntry">
+                                        <div data-lockey-innerhtml="ui.label.autoCount" class="menuItem">Count</div>
+                                    </li>
+                                    <li data-lockey-tooltip="ui.hint.autoMax" id="autoMax" class="menuEntry">
+                                        <div data-lockey-innerhtml="ui.label.autoMax" class="menuItem">Max</div>
+                                    </li>
+                                    <li data-lockey-tooltip="ui.hint.autoMin" id="autoMin" class="menuEntry">
+                                        <div data-lockey-innerhtml="ui.label.autoMin" id="autoMin" class="menuItem">Min</div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="submenu">
+                <span class="title" data-lockey-innerhtml="ui.label.sort">Sort</span>
+                <ul id="sortBtnGroup" class="btnGroup">
+                    <li data-lockey-tooltip="ui.hint.sortaz">
+                        <div id="sortaz" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                            <div data-lockey-innerhtml="ui.label.sortaz">A to Z</div>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.sortza">
+                        <div id="sortza" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                            <div data-lockey-innerhtml="ui.label.sortza">Z to A</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="submenu">
+                <span class="title" data-lockey-innerhtml="ui.label.filter">Filter</span>
+                <div class="btnGroup">
+                    <div data-lockey-tooltip="ui.hint.addFilter" data-lockey-innerhtml="ui.label.add" id="addFilter" class="uk-button uk-button-mini uk-btn-margin">
+                        Add
+                    </div>
+                    <div data-lockey-tooltip="ui.hint.deleteFilter" data-lockey-innerhtml="ui.label.delete" id="clearFilter" class="uk-button uk-button-mini uk-btn-margin">
+                        Delete
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="rightMenuPanel noselect" id="formatPanel">
+            <div class="submenu">
+                <span class="title" data-lockey-innerhtml="ui.label.font">Font</span>
+                <span class="title">&nbsp;/&nbsp;</span>
+                <span class="title" data-lockey-innerhtml="ui.label.fill.short">Fill</span>
+                <div class="btnGroup">
+                    <select data-lockey-tooltip="ui.hint.fontStyle" id="fontStyle" name="ComboBox">
+                        <option value="Arial" selected>Arial</option>
+                        <option value="ArialBlack">Arial Black</option>
+                        <option value="CourierNew">Courier New</option>
+                        <option value="Georgia">Georgia</option>
+                        <option value="Helvetica">Helvetica</option>
+                        <option value="Menlo">Menlo</option>
+                        <option value="Palatino">Palatino</option>
+                        <option value="Tahoma">Tahoma</option>
+                        <option value="Times">Times</option>
+                        <option value="TimesNewRoman">Times New Roman</option>
+                        <option value="TrebuchetMS">Trebuchet MS</option>
+                        <option value="Verdana">Verdana</option>
+                    </select>
+                    <select data-lockey-tooltip="ui.hint.fontSize" id="fontSize" name="ComboBox">
+                        <option value="8pt">8</option>
+                        <option value="9pt">9</option>
+                        <option value="10pt" selected>10</option>
+                        <option value="11pt">11</option>
+                        <option value="12pt">12</option>
+                        <option value="14pt">14</option>
+                        <option value="16pt">16</option>
+                        <option value="18pt">18</option>
+                        <option value="20pt">20</option>
+                        <option value="24pt">24</option>
+                        <option value="26pt">26</option>
+                        <option value="28pt">28</option>
+                        <option value="36pt">36</option>
+                        <option value="48pt">48</option>
+                        <option value="72pt">72</option>
+                    </select>
+                </div>
+                <div class="btnRow">
+                    <ul class="btnGroup">
+                        <li data-lockey-tooltip="ui.hint.bold">
+                            <div id="bold" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                        <li data-lockey-tooltip="ui.hint.italic">
+                            <div id="italic" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                        <li data-lockey-tooltip="ui.hint.underline">
+                            <div id="underline" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                    </ul>
+                    <div data-lockey-tooltip="ui.hint.fontColor" id="fontColor" class="uk-button uk-button-mini uk-btn-margin colorPickerBtn">
+                        <div class="colorHandler"></div>
+                    </div>
+                </div>
+                <div class="btnGroup">
+                    <span class="label" data-lockey-innerhtml="ui.label.fill">Fill</span>
+                    <div data-lockey-tooltip="ui.hint.backgroundColor" id="backgroundColor" class="uk-button uk-button-mini uk-btn-margin colorPickerBtn">
+                        <div class="colorHandler"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="submenu">
+                <span class="title" data-lockey-innerhtml="ui.label.alignment">Alignment</span>
+                <div class="btnRow">
+                    <ul class="btnGroup">
+                        <li data-lockey-tooltip="ui.hint.leftAlign">
+                            <div id="leftAlign" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                        <li data-lockey-tooltip="ui.hint.centerAlign">
+                            <div id="centerAlign" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                        <li data-lockey-tooltip="ui.hint.rightAlign">
+                            <div id="rightAlign" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                    </ul>
+                    <ul id="indent" class="btnGroup">
+                        <li data-lockey-tooltip="ui.hint.decreaseIndent">
+                            <div id="decreaseIndent" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                        <li data-lockey-tooltip="ui.hint.increaseIndent">
+                            <div id="increaseIndent" class="uk-button uk-button-mini hidden-btn">
+                                <img>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <ul class="btnGroup">
+                    <li data-lockey-tooltip="ui.hint.topAlign">
+                        <div id="topAlign" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.middleAlign">
+                        <div id="middleAlign" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.bottomAlign">
+                        <div id="bottomAlign" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btnGroup" data-lockey-tooltip="ui.hint.wrapText">
+                    <input type="checkbox" id="wrapText" />
+                    <label for="wrapText" data-lockey-innerhtml="ui.label.wrapText">Wrap text in cell</label>
+                </div>
+            </div>
+            <div class="submenu">
+                <span class="title" data-lockey-innerhtml="ui.label.cellEdit">Cells</span>
+                <ul id="editCellBtnGroup" class="btnGroup">
+                    <li>
+                        <div class="icongroup">
+                            <div class="contextMenu smallicon uk-button uk-button-mini hidden-btn icon" id="rmn-insert-rows-menu">
+                                <div data-lockey-tooltip="ui.hint.add" class="iconlegend" id="rmn-insert-rows">
+                                    <img>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div id="insertMenu" class="menu">
+                                    <div class="menucontents">
+                                        <ul>
+                                            <li data-lockey-tooltip="ui.label.addCellsRight" id="addCellsRight" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.addCellsRight" class="menuItem">Insert cells and shift right</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.label.addCellsDown" id="addCellsDown" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.addCellsDown" class="menuItem">Insert cells and shift down</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.addRow" id="addRow" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.addRow" class="menuItem">Insert row(s)</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.addCol" id="addCol" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.addCol" class="menuItem">Insert column(s)</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.addSheet" id="addSheet" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.addSheet" class="menuItem">Insert worksheet</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icongroup">
+                            <div class="contextMenu smallicon uk-button uk-button-mini hidden-btn icon">
+                                <div data-lockey-tooltip="ui.hint.delete" class="iconlegend" id="rmn-remove-rows">
+                                    <img>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div id="deleteMenu" class="menu">
+                                    <div class="menucontents">
+                                        <ul>
+                                            <li data-lockey-tooltip="ui.label.deleteCellsLeft" id="deleteCellsLeft" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.deleteCellsLeft" class="menuItem">Delete cells and shift left</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.label.deleteCellsUp" id="deleteCellsUp" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.deleteCellsUp" class="menuItem">Delete cells and shift up</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.deleteRow" id="deleteRow" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.deleteRow" class="menuItem">Delete row(s)</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.deleteCol" id="deleteCol" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.deleteCol" class="menuItem">Delete column(s)</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.deleteSheet" id="deleteSheet" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.deleteSheet" class="menuItem">Delete worksheet</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="icongroup">
+                            <div class="contextMenu smallicon uk-button uk-button-mini hidden-btn icon">
+                                <div data-lockey-tooltip="ui.hint.clear" class="iconlegend" id="rmn-clear">
+                                    <img>
+                                    <i class="fa fa-caret-down"></i>
+                                </div>
+                                <div id="clearMenu" class="menu">
+                                    <div class="menucontents">
+                                        <ul>
+                                            <li data-lockey-tooltip="ui.hint.clearAll" id="clearAll" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.clearAll" class="menuItem">Clear all</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.clearFormat" id="clearFormat" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.clearFormat" class="menuItem">Clear formatting</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.clearContent" id="clearContent" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.clearContent" class="menuItem">Clear content</div>
+                                            </li>
+                                            <li data-lockey-tooltip="ui.hint.clearComents" id="clearComments" class="menuEntry">
+                                                <div data-lockey-innerhtml="ui.label.clearComments" id="clearComments" class="menuItem">Clear comments</div>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <div class="btnGroup">
+                    <div data-lockey-tooltip="ui.hint.mergeCenter" data-lockey-innerhtml="ui.label.mergeCenter" id="mergeCenter" class="uk-button uk-button-mini uk-btn-margin">
+                        Merge
+                    </div>
+                    <button data-lockey-tooltip="ui.hint.unmerge" data-lockey-innerhtml="ui.label.unmerge" id="unmerge" class="uk-button uk-button-mini uk-btn-margin">
+                        Unmerge
+                    </button>
+                </div>
+            </div>
+            <div class="submenu doublePadding">
+                <span class="title" data-lockey-innerhtml="ui.label.border">Borders</span>
+                <ul id="border" class="btnGroup">
+                    <li data-lockey-tooltip="ui.hint.bordersBottom">
+                        <div id="bordersBottom" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.bordersTop">
+                        <div id="bordersTop" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.bordersLeft">
+                        <div id="bordersLeft" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.bordersRight">
+                        <div id="bordersRight" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="btnGroup">
+                    <li data-lockey-tooltip="ui.hint.noBorders">
+                        <div id="noBorders" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.allBorders">
+                        <div id="allBorders" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.outsideBorders">
+                        <div id="outsideBorders" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.thickBoxBorder">
+                        <div id="thickBoxBorder" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="btnGroup">
+                    <li data-lockey-tooltip="ui.hint.topDoubleBottomBordes">
+                        <div id="topDoubleBottomBordes" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.topThickBottomBorders">
+                        <div id="topThickBottomBorders" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.doubleBottomBorders">
+                        <div id="doubleBottomBorders" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                    <li data-lockey-tooltip="ui.hint.topBottomBorders">
+                        <div id="topBottomBorders" class="uk-button uk-button-mini hidden-btn">
+                            <img>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="rightMenuPanel noselect noscroll-x" id="printPanel">
+            <div class="submenu">
+                <span class="title" data-lockey-innerhtml="ui.label.pagesetup">Page Setup</span>
+                <div class="btnGroup">
+                    <strong>
+                        <span class="" data-lockey-innerhtml="ui.label.print.papersize">Paper size</span>
+                    </strong>
+                    <br>
+                    <div id="printPaperSize" class="">
+                        US Letter
+                        <br>8.50" x 11.00"
+                    </div>
+                </div>
+                <div class="btnGroup" style="text-align: center;">
+                    <div data-lockey-innerhtml="ui.label.change" id="buttonPrintPageSetup" class="uk-button uk-button-mini uk-btn-margin">Change</div>
+                </div>
+                <span class="title" data-lockey-innerhtml="ui.label.print">Print</span>
+                <div class="btnGroup nowrap">
+                    <input type="checkbox" id="printHeader">
+                    <label for="printHeader" data-lockey-innerhtml="ui.label.print.headers">Row and column headings</label>
+                </div>
+                <div class="btnGroup">
+                    <input type="checkbox" id="printGridlines">
+                    <label for="printGridlines" data-lockey-innerhtml="ui.label.print.gridlines">Gridlines</label>
+                </div>
+                <div class="btnGroup">
+                    <input type="checkbox" id="printPageNumber">
+                    <label for="printPageNumber" data-lockey-innerhtml="ui.label.print.pagenumber">Page number</label>
+                </div>
+                <div class="btnGroup">
+                    <strong>
+                        <span data-lockey-innerhtml="ui.label.print.scaletofit">Scale to fit</span>
+                    </strong>
+                    <br>
+                    <select id="printScaleWide" name="ComboBox">
+                        <option value="0" selected>&ndash;</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <span data-lockey-innerhtml="ui.label.scaletofit.pwide">page(s) wide</span>
+
+                    <br>
+                    <select id="printScaleTall" name="ComboBox">
+                        <option value="0" selected>&ndash;</option>
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5</option>
+                        <option value="6">6</option>
+                        <option value="7">7</option>
+                        <option value="8">8</option>
+                        <option value="9">9</option>
+                    </select>
+                    <span data-lockey-innerhtml="ui.label.scaletofit.ptall">page(s) tall</span>
+
+                </div>
+                <div class="btnGroup" style="text-align: center;">
+                    <div data-lockey-innerhtml="ui.label.buttonPrint" id="buttonPrint" class="uk-button uk-button-mini uk-btn-margin">Print</div>
+                </div>
+                <div class="btnGroup" style="text-align: center;">
+                    <div data-lockey-innerhtml="ui.label.buttonCancel" id="buttonPrintCancel" class="uk-button uk-button-mini uk-btn-margin">Cancel</div>
+                </div>
+            </div>
+        </div>
+        <div class="rightMenuPanel" id="selectRangePanel">
+            <div class="submenu doublePadding">
+                <span class="title" data-lockey-innerhtml="ui.label.fillvals">Select Range</span>
+                <div style="float:right;">
+
+                </div>
+                <div class="ui input focus fluid">
+                    <input id="pnlSelectRangeSelectedRange" type="text" class="form-control" readonly="readonly">
+                </div>
+
+
+                <button class="positive fluid ui button margin-top-03" id="pnlSelectRangeBtnRangeSelected">
+                    OK
+                </button>
+                <button id="pnlSelectRangeClose" type="button" class="ui button fluid margin-top-03">
+                    Cancel
+                </button>
+
+                <div class="ui" id="pnl-select-info">
+                    <div id="pnl-select-range">
+
+                    </div>
+                    <div id="pnl-select-rows-columns">
+                        <strong></strong> rows
+                        <strongr>
+                            <strong></strong> columns
+                    </div>
+
+                    <div id="pnl-select-label">
+                        Data must have
+                        <strong>no labels</strong>.
+                    </div>
+                </div>
+
+
+
+            </div>
+
+        </div>
+
+
+        <div class="rightMenuPanel noselect" id="findPanel">
+            <div class="submenu doublePadding">
+                <div>
+                    <div class="text-center">
+                        <span class="title" data-lockey-innerhtml="ui.label.find">Find</span>
+                    </div>
+                    <div class="text-center">
+                        <input type="text" id="find-next" value="">
+                    </div>
+                </div>
+                <div class="panel--l2">
+                    <label for="radio-within">Within</label>
+                    <!-- <div id="radio-within"> -->
+                    <!-- <label for="">Worksheet</label> -->
+                    <select name="Worksheet" id="find-worksheet">
+                        <option name="radio-within" id="radio-within--worksheet" value="worksheet">Worksheet</option>
+                        <option name="radio-within" id="radio-within--workbook" value="workbook">Workbook</option>
+                    </select>
+                    <!-- <input type="radio" name="radio-within" id="radio-within--worksheet" value="worksheet" checked="checked">
+                        <label for="">Workbook</label>
+                        <input type="radio" name="radio-within" id="radio-within--workbook" value="workbook"> -->
+                    <!-- </div> -->
+                </div>
+                <div class="panel--l2">
+                    <label for="radio-search">Search by</label>
+                    <select name="radio-search" id="radio-search">
+                        <option name="radio-search" value="rows">Rows</option>
+                        <option name="radio-search" value="columns">Columns</option>
+                    </select>
+                    <!--  <div id="radio-search">
+                        <label for="">Rows</label>
+                        <input type="radio" name="radio-search" value="rows" checked="checked">
+                        <label for="">Columns</label>
+                        <input type="radio" name="radio-search" value="columns">
+                    </div> -->
+                </div>
+                <div class="panel--l2">
+                    <label for="radio-look">Look in</label>
+                    <!-- <div id="radio-look">
+                        <label for="">Values</label>
+                        <input type="radio" name="radio-look" value="values" checked="checked">
+                        <label for="">Formulas</label>
+                        <input type="radio" name="radio-look" value="formulas">
+                    </div> -->
+                    <select name="radio-look" id="radio-look">
+                        <option name="radio-look" value="values">Values</option>
+                        <option name="radio-look" value="formulas">Formulas</option>
+                    </select>
+                </div>
+                <div>
+                    <div id="checkbox-match" class="submenu">
+                        <div>
+                            <input type="checkbox" name="checkbox-match" id="checkbox-match--case" value="case">
+                            <label for="">Match case</label>
+
+                        </div>
+                        <div>
+                            <input type="checkbox" name="checkbox-match" id="checkbox-match--exactly" value="exactly">
+                            <label for="">Match exactly</label>
+
+                        </div>
+                        <div>
+
+                            <input type="checkbox" name="checkbox-match" id="checkbox-match--wildcards" value="wildcards">
+                            <label for="">Use wildcards</label>
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="text-center">
+
+                    <button id="find-next--action" type="button" class="uk-button uk-button-mini uk-btn-margin" onclick="findnext()">
+                        Find Next
+                    </button>
+                    <button id="find-next--cancel" type="button" class="uk-button uk-button-mini uk-btn-margin" onclick="hideAllPanels()">Cancel</button>
+                </div>
+
+
+
+
+
+            </div>
+
+        </div>
+        <div class="rightMenuPanel noselect" id="chartPanel">
+
+            <div class="doublePadding">
+                <div class="submenu">
+                    <span class="title" data-lockey-innerhtml="ui.label.editchart">Edit Chart</span>
+                    <div style="float:right;">
+
+                    </div>
+                    <div>
+                        <!--input type="checkbox" name="title-checkbox" id="chart__title--checkbox"-->
+                        <label for="title-checkbox">Title</label>
+                    </div>
+                    <div>
+                        <textarea name="chart__title" id="chart__title" cols="20" rows="3">
+        
+                        </textarea>
+                    </div>
+                </div>
+
+                <div id='accordionChartAxis' class="submenu">
+                    <h3>
+                        Left
+                    </h3>
+                    <div>
+                        <div class="panel--l2">
+                            <label for="chart__axis__y--title">Axis Name</label>
+                            <input type="text" id="chart__axis__y--title">
+                        </div>
+                        <div class="panel--l2">
+                            <label for="chart__axis__y--max">Minimum</label>
+                            <input type="number" id="chart__axis__y--min">
+                        </div>
+                        <div class="panel--l2">
+                            <label for="chart">Maximum</label>
+                            <input type="number" id="chart__axis__y--max">
+                        </div>
+                        <div class="panel--l2">
+                            <label for="">Major Unit</label>
+                            <input type="number" id="chart__axis__y--majorunit">
+                        </div>
+
+                        <div>
+                            <input name="chart__axis__y--gridlines" id="chart__axis__y--gridlines" type="checkbox">
+                            <label for="chart__axis__y--gridlines">Gridlines</label>
+                        </div>
+
+                        <!--           <div class="panel--l2">
+                            <label for="chart__axis__y--display-units">Display Units</label>
+                            <select name="chart__axis__y--display-units" id="chart__axis__y--display-units">
+                                <option value="none">None</option>
+                                <option value="hundreds">Hundreds</option>
+                                <option value="thousands">Thousands</option>
+                                <option value="10000">10000</option>
+                                <option value="100000">100000</option>
+                                <option value="millions">Millions</option>
+                                <option value="10000000">10000000</option>
+                                <option value="100000000">100000000</option>
+                                <option value="billions">Billions</option>
+                                <option value="Trillions">Trillions</option>
+                            </select>
+                        </div> -->
+                    </div>
+                    <h3>
+                        Bottom
+                    </h3>
+                    <div>
+                        <div class="panel--l2">
+                            <label for="chart__axis__x--title">Axis Name</label>
+                            <input type="text" id="chart__axis__x--title">
+                         </div>
+                        <div class="panel--l2">
+                            <label for="chart__axis__x--min">Minimum</label>
+                            <input type="number" id="chart__axis__x--min">
+                        </div>
+                        <div class="panel--l2">
+                            <label for="chart">Maximum</label>
+                            <input type="number" id="chart__axis__x--max">
+                        </div>
+                        <div class="panel--l2">
+                            <label for="">Major Unit</label>
+                            <input type="number" id="chart__axis__x--majorunit">
+                        </div>
+
+                        <div>
+                            <input name="chart__axis__x--gridlines" id="chart__axis__x--gridlines" type="checkbox">
+                            <label for="chart__axis__x--gridlines">Gridlines</label>
+                        </div>
+
+                        <!-- <div class="panel--l2">
+                            <label for="chart__axis__x--display-units">Display Units</label>
+                            <select name="chart__axis__x--display-units" id="chart__axis__x--display-units">
+                                <option value="none">None</option>
+                                <option value="hundreds">Hundreds</option>
+                                <option value="thousands">Thousands</option>
+                                <option value="10000">10000</option>
+                                <option value="100000">100000</option>
+                                <option value="millions">Millions</option>
+                                <option value="10000000">10000000</option>
+                                <option value="100000000">100000000</option>
+                                <option value="billions">Billions</option>
+                                <option value="Trillions">Trillions</option>
+                            </select>
+                        </div> -->
+                    </div>
+                </div>
+                <div class="submenu">
+
+                    <div class="panel--l3">
+                        <label for="chart__axis--series">Series</label>
+
+                        <select name="chart__axis--series" id="chart__axis--series"></select>
+                    </div>
+                    <div class=" p-t-5 panel--l3">
+                        <span class="labelregular" data-lockey-innerhtml="">Color</span>
+                        <div data-lockey-tooltip="ui.hint.backgroundColor" id="chartSeriesColor" class="uk-button uk-button-mini uk-btn-margin colorPickerBtn">
+                            <div class="colorHandler"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <div class="submenu">
+                    <div>
+                        <input type="checkbox" name="chart__legend" id="chart__legend" onchange="updateChartEditLegend()">
+                        <label for="chart__legend">Legend</label>
+                    </div>
+                    <div>
+                        <input type="checkbox" name="chart__border" id="chart__border">
+                        <label for="chart__border">Border</label>
+                        <div data-lockey-tooltip="ui.hint.backgroundColor" id="chartBorderColor" class="uk-button uk-button-mini uk-btn-margin colorPickerBtn">
+                            <div class="colorHandler"></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="btn--apply"><button id="chart__axis__x--apply" class="btn--apply">Apply</button></div> -->
+                <div class="text-center">
+                        <div id="imgtocopy" class="imgselect">
+                                <img style="width : 0; height: 1;" src="#" alt="" >
+                              </div>
+    <button id="copyChartToClipboard" data-clipboard-action="copy" data-clipboard-target="#imgtocopy" class="uk-button-mini uk-btn-margin">Copy As Image</button>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+
+
+    <div id="data-input-window" class="ui modal large">
+        <div class="header"></div>
+        <div class="content padding-bottom-02">
+            <div class="ui divided grid" id="main-options">
+                <div class="row padding-small">
+                    <div class="four wide column" id="columns-container">
+                        <label for="sheet-list">Columns for: </label>
+                        <div class="ui inline dropdown" id="sheet-list">
+                            <input type="hidden" name="sheet-list">
+
+                            <div class="default text"></div>
+                            <div class="menu">
+                                <div class="item"></div>
+                            </div>
+                            <i class="dropdown icon"></i>
+                        </div>
+
+                        <div class="ui card margin-top-03">
+                            <div class="content padding-left-05">
+
+
+                                <div class="description">
+
+                                    <div class="ul selection list ui" id='columns-place'>
+
+
+
+                                    </div>
+
+
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div class="twelve wide column " id="inputs-fields">
+
+                    </div>
+                </div>
+            </div>
+            <div class="advanced-options ui small segment" id="advanced-options">
+                <div class="ui grid advanced-options__content">
+                </div>
+            </div>
+        </div>
+        <div class="actions">
+            <button class="ui icon  basic button left floated">
+                <i class="question circle outline icon"></i>
+            </button>
+            <span class="">
+                <label for="datalabelsfirstrow-list">Data has </label>
+                <div class="ui inline dropdown" id="datalabelsfirstrow-list">
+                    <input type="hidden" name="datalabelsfirstrow-list">
+                    <div class="text">headers in first row</div>
+                    <i class="dropdown icon"></i>
+                    <div class="menu">
+                        <div class="item">headers in first row</div>
+                        <div class="item">no headers</div>
+                    </div>
+                </div>
+            </span>
+            <div class="ui green button ok">Run</div>
+        </div>
+    </div>
+    <div id="ssForSave" style="display:none;"></div>
+    <canvas id="canvas" style="display:none;background-color:#fff"></canvas>
+    <script src="./Scripts/jquery-2.1.1.min.js"></script>
+    <script src="./Scripts/jquery-ui.min.js"></script>
+    <script src="./Scripts/globalize.min.js"></script>
+    <script src="./Scripts/globalize.cultures.js"></script>
+
+    <script src="./Scripts/gcspread.sheets.all.9.40.20161.0.min.js"></script>
+    <script src="./Scripts/gcspread.sheets.print.9.40.20161.0.min.js"></script>
+    <script src="./Scripts/gcspread.sheets.resources.ja.9.40.20161.0.min.js"></script>
+    <script src="./Scripts/spread6io.js"></script>
+    <script src="./Scripts/spread6.js"></script>
+    <script src="./Scripts/colpick.js"></script>
+    <!-- Uikit scripts -->
+    <script src="./Scripts/uikit.min.js"></script>
+    
+    <!-- Required scripts for charts -->
+    <script charset="utf-8" src="./Scripts/d3.js"></script>
+    <script src="./Scripts/d3tip.js"></script>
+    <script src="./Scripts/d3ChartGear.js"></script>
+    <!-- Required scripts to convert chart to png -->
+    <script type="text/javascript" src="./Scripts/rgbcolor.js"></script>
+    <script type="text/javascript" src="./Scripts/StackBlur.js"></script>
+    <script type="text/javascript" src="./Scripts/canvg.min.js"></script>
+    <!-- Semantic UI -->
+    <!--script type="text/javascript" src="./Scripts/semantic.min.js"></script-->
+    <!-- Analysis Panel -->
+    <script type="text/javascript" src="./Scripts/cmdspanel/cmdsmenucreate.js"></script>
+    <script type="text/javascript" src="./Scripts/cmdspanel/cmdsmenushow.js"></script>
+    <!--Data input window-->
+    <script type="text/javascript" src="./Scripts/datainputwindow/spread6adds.js"></script>
+    <script type="text/javascript" src="./Scripts/datainputwindow/spread6create.js"></script>
+    <script type="text/javascript" src="./Scripts/datainputwindow/spread6showmodal.js"></script>
+    <script type="text/javascript" src="./Scripts/spread6fmx.js"></script>
+    <script type="text/javascript" src="./Scripts/spread6di.js"></script>
+
+    <script type="text/javascript" src="./Scripts/spread6find.js"></script>
+    <script type="text/javascript" src="./Scripts/spread6chartedit.js"></script>
+    <script type="text/javascript" src="./Scripts/clipboard.min.js"></script>
+    <!-- REMOVE Test JSON -->
+    <script type="text/javascript" src="./Scripts/jsonsForTest/en1002b.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/1001.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/1002.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/1301.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/1601.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/4105.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/10052.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/test_data.js"></script>
+    <script type="text/javascript" src="./Scripts/jsonsForTest/menu_en.js"></script>
+    <!-- // REMOVE Test JSON -->
+    <script src="./dataForCharts.js"></script>
+    <script>
+        $(document).ready(function () {
+
+
+            document.addEventListener('mousewheel', function (e) {
+                if (e.ctrlKey) {
+                    e.preventDefault();
+                }
+            });
+            var icons = {
+                header: "fa fa-caret-right",
+                activeHeader: "fa fa-caret-down"
+            };
+            $("#accordion").accordion({
+                heightStyle: "content",
+                icons: icons
+
+            });
+            console.log()
+            /* FOR TEST CHARTS */
+            var spread = $("#ss").wijspread("spread"); // get instance of wijspread widget
+            var sheet = spread.getActiveSheet(); // get active worksheet of the wijspread widget
+        
+
+            
+            
+
+            chartJSON[0].row = 1;
+            createChart(sheet, chartJSON[0]);
+            createChart(sheet, chartJSON2[0]);
+
+            createChart(sheet, chartJSON3);
+            createChart(sheet, chartJSON4);
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

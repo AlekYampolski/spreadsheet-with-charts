@@ -1,0 +1,7966 @@
+/* Copyright (c) Microsoft. All rights reserved. Licensed under the MIT license. See LICENSE in the project root for license information. */
+/**
+ * Office UI Fabric Core 5.0.1
+ * The front-end framework for building experiences for Office 365.
+ **/
+ @charset "UTF-8";
+
+ .kw-u-borderBox,
+ .kw-u-borderBox::before,
+ .kw-u-borderBox::after {
+     box-sizing: border-box;
+ }
+ 
+ .kw-u-borderBase {
+     border: 1px solid;
+ }
+ 
+ .kw-u-clearfix {
+     *zoom: 1;
+ }
+ 
+     .kw-u-clearfix::before,
+     .kw-u-clearfix::after {
+         display: table;
+         content: '';
+         line-height: 0;
+     }
+ 
+     .kw-u-clearfix::after {
+         clear: both;
+     }
+ 
+ .kw-u-normalize {
+     box-sizing: border-box;
+     margin: 0;
+     padding: 0;
+     box-shadow: none;
+ }
+ 
+ .kw-u-textAlignLeft {
+     text-align: left;
+ }
+ 
+ .kw-u-textAlignCenter {
+     text-align: center;
+ }
+ 
+ .kw-u-textAlignRight {
+     text-align: right;
+ }
+ 
+ .kw-u-screenReaderOnly {
+     position: absolute;
+     width: 1px;
+     height: 1px;
+     padding: 0;
+     margin: -1px;
+     overflow: hidden;
+     clip: rect(0, 0, 0, 0);
+     border: 0;
+ }
+ 
+ .kw-u-textTruncate {
+     overflow: hidden;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     word-wrap: normal;
+ }
+ 
+ .kw-u-noWrap {
+     white-space: nowrap;
+ }
+ 
+ .kw-bgColor-themeDark,
+ .kw-bgColor-themeDark--hover:hover {
+     background-color: #005a9e;
+ }
+ 
+ .kw-bgColor-themeDarkAlt,
+ .kw-bgColor-themeDarkAlt--hover:hover {
+     background-color: #106ebe;
+ }
+ 
+ .kw-bgColor-themeDarker,
+ .kw-bgColor-themeDarker--hover:hover {
+     background-color: #004578;
+ }
+ 
+ .kw-bgColor-themePrimary,
+ .kw-bgColor-themePrimary--hover:hover {
+     background-color: #0078d7;
+ }
+ 
+ .kw-bgColor-themeSecondary,
+ .kw-bgColor-themeSecondary--hover:hover {
+     background-color: #2488d8;
+ }
+ 
+ .kw-bgColor-themeTertiary,
+ .kw-bgColor-themeTertiary--hover:hover {
+     background-color: #69afe5;
+ }
+ 
+ .kw-bgColor-themeLight,
+ .kw-bgColor-themeLight--hover:hover {
+     background-color: #b3d6f2;
+ }
+ 
+ .kw-bgColor-themeLighter,
+ .kw-bgColor-themeLighter--hover:hover {
+     background-color: #deecf9;
+ }
+ 
+ .kw-bgColor-themeLighterAlt,
+ .kw-bgColor-themeLighterAlt--hover:hover {
+     background-color: #eff6fc;
+ }
+ 
+ .kw-bgColor-black,
+ .kw-bgColor-black--hover:hover {
+     background-color: #000000;
+ }
+ 
+ .kw-bgColor-neutralDark,
+ .kw-bgColor-neutralDark--hover:hover {
+     background-color: #212121;
+ }
+ 
+ .kw-bgColor-neutralPrimary,
+ .kw-bgColor-neutralPrimary--hover:hover {
+     background-color: #333333;
+ }
+ 
+ .kw-bgColor-neutralPrimaryAlt,
+ .kw-bgColor-neutralPrimaryAlt--hover:hover {
+     background-color: #3c3c3c;
+ }
+ 
+ .kw-bgColor-neutralSecondary,
+ .kw-bgColor-neutralSecondary--hover:hover {
+     background-color: #666666;
+ }
+ 
+ .kw-bgColor-neutralSecondaryAlt,
+ .kw-bgColor-neutralSecondaryAlt--hover:hover {
+     background-color: #767676;
+ }
+ 
+ .kw-bgColor-neutralTertiary,
+ .kw-bgColor-neutralTertiary--hover:hover {
+     background-color: #a6a6a6;
+ }
+ 
+ .kw-bgColor-neutralTertiaryAlt,
+ .kw-bgColor-neutralTertiaryAlt--hover:hover {
+     background-color: #c8c8c8;
+ }
+ 
+ .kw-bgColor-neutralLight,
+ .kw-bgColor-neutralLight--hover:hover {
+     background-color: #eaeaea;
+ }
+ 
+ .kw-bgColor-neutralLighter,
+ .kw-bgColor-neutralLighter--hover:hover {
+     background-color: #f4f4f4;
+ }
+ 
+ .kw-bgColor-neutralLighterAlt,
+ .kw-bgColor-neutralLighterAlt--hover:hover {
+     background-color: #f8f8f8;
+ }
+ 
+ .kw-bgColor-white,
+ .kw-bgColor-white--hover:hover {
+     background-color: #ffffff;
+ }
+ 
+ .kw-bgColor-yellow {
+     background-color: #ffb900;
+ }
+ 
+ .kw-bgColor-yellowLight {
+     background-color: #fff100;
+ }
+ 
+ .kw-bgColor-orange {
+     background-color: #d83b01;
+ }
+ 
+ .kw-bgColor-orangeLight {
+     background-color: #ea4300;
+ }
+ 
+ .kw-bgColor-orangeLighter {
+     background-color: #ff8c00;
+ }
+ 
+ .kw-bgColor-redDark {
+     background-color: #a80000;
+ }
+ 
+ .kw-bgColor-red {
+     background-color: #e81123;
+ }
+ 
+ .kw-bgColor-magentaDark {
+     background-color: #5c005c;
+ }
+ 
+ .kw-bgColor-magenta {
+     background-color: #b4009e;
+ }
+ 
+ .kw-bgColor-magentaLight {
+     background-color: #e3008c;
+ }
+ 
+ .kw-bgColor-purpleDark {
+     background-color: #32145a;
+ }
+ 
+ .kw-bgColor-purple {
+     background-color: #5c2d91;
+ }
+ 
+ .kw-bgColor-purpleLight {
+     background-color: #b4a0ff;
+ }
+ 
+ .kw-bgColor-blueDark {
+     background-color: #002050;
+ }
+ 
+ .kw-bgColor-blueMid {
+     background-color: #00188f;
+ }
+ 
+ .kw-bgColor-blue {
+     background-color: #0078d7;
+ }
+ 
+ .kw-bgColor-blueLight {
+     background-color: #00bcf2;
+ }
+ 
+ .kw-bgColor-tealDark {
+     background-color: #004b50;
+ }
+ 
+ .kw-bgColor-teal {
+     background-color: #008272;
+ }
+ 
+ .kw-bgColor-tealLight {
+     background-color: #00b294;
+ }
+ 
+ .kw-bgColor-greenDark {
+     background-color: #004b1c;
+ }
+ 
+ .kw-bgColor-green {
+     background-color: #107c10;
+ }
+ 
+ .kw-bgColor-greenLight {
+     background-color: #bad80a;
+ }
+ 
+ .kw-bgColor-info {
+     background-color: #f4f4f4;
+ }
+ 
+ .kw-bgColor-success {
+     background-color: #dff6dd;
+ }
+ 
+ .kw-bgColor-severeWarning {
+     background-color: #fed9cc;
+ }
+ 
+ .kw-bgColor-warning {
+     background-color: #fff4ce;
+ }
+ 
+ .kw-bgColor-error {
+     background-color: #fde7e9;
+ }
+ 
+ .kw-borderColor-themeDark,
+ .kw-borderColor-themeDark--hover:hover {
+     border-color: #005a9e;
+ }
+ 
+ .kw-borderColor-themeDarkAlt,
+ .kw-borderColor-themeDarkAlt--hover:hover {
+     border-color: #106ebe;
+ }
+ 
+ .kw-borderColor-themeDarker,
+ .kw-borderColor-themeDarker--hover:hover {
+     border-color: #004578;
+ }
+ 
+ .kw-borderColor-themePrimary,
+ .kw-borderColor-themePrimary--hover:hover {
+     border-color: #0078d7;
+ }
+ 
+ .kw-borderColor-themeSecondary,
+ .kw-borderColor-themeSecondary--hover:hover {
+     border-color: #2488d8;
+ }
+ 
+ .kw-borderColor-themeTertiary,
+ .kw-borderColor-themeTertiary--hover:hover {
+     border-color: #69afe5;
+ }
+ 
+ .kw-borderColor-themeLight,
+ .kw-borderColor-themeLight--hover:hover {
+     border-color: #b3d6f2;
+ }
+ 
+ .kw-borderColor-themeLighter,
+ .kw-borderColor-themeLighter--hover:hover {
+     border-color: #deecf9;
+ }
+ 
+ .kw-borderColor-themeLighterAlt,
+ .kw-borderColor-themeLighterAlt--hover:hover {
+     border-color: #eff6fc;
+ }
+ 
+ .kw-borderColor-black,
+ .kw-borderColor-black--hover:hover {
+     border-color: #000000;
+ }
+ 
+ .kw-borderColor-neutralDark,
+ .kw-borderColor-neutralDark--hover:hover {
+     border-color: #212121;
+ }
+ 
+ .kw-borderColor-neutralPrimary,
+ .kw-borderColor-neutralPrimary--hover:hover {
+     border-color: #333333;
+ }
+ 
+ .kw-borderColor-neutralPrimaryAlt,
+ .kw-borderColor-neutralPrimaryAlt--hover:hover {
+     border-color: #3c3c3c;
+ }
+ 
+ .kw-borderColor-neutralSecondary,
+ .kw-borderColor-neutralSecondary--hover:hover {
+     border-color: #666666;
+ }
+ 
+ .kw-borderColor-neutralSecondaryAlt,
+ .kw-borderColor-neutralSecondaryAlt--hover:hover {
+     border-color: #767676;
+ }
+ 
+ .kw-borderColor-neutralTertiary,
+ .kw-borderColor-neutralTertiary--hover:hover {
+     border-color: #a6a6a6;
+ }
+ 
+ .kw-borderColor-neutralTertiaryAlt,
+ .kw-borderColor-neutralTertiaryAlt--hover:hover {
+     border-color: #c8c8c8;
+ }
+ 
+ .kw-borderColor-neutralLight,
+ .kw-borderColor-neutralLight--hover:hover {
+     border-color: #eaeaea;
+ }
+ 
+ .kw-borderColor-neutralLighter,
+ .kw-borderColor-neutralLighter--hover:hover {
+     border-color: #f4f4f4;
+ }
+ 
+ .kw-borderColor-neutralLighterAlt,
+ .kw-borderColor-neutralLighterAlt--hover:hover {
+     border-color: #f8f8f8;
+ }
+ 
+ .kw-borderColor-white,
+ .kw-borderColor-white--hover:hover {
+     border-color: #ffffff;
+ }
+ 
+ .kw-borderColor-yellow {
+     border-color: #ffb900;
+ }
+ 
+ .kw-borderColor-yellowLight {
+     border-color: #fff100;
+ }
+ 
+ .kw-borderColor-orange {
+     border-color: #d83b01;
+ }
+ 
+ .kw-borderColor-orangeLight {
+     border-color: #ea4300;
+ }
+ 
+ .kw-borderColor-orangeLighter {
+     border-color: #ff8c00;
+ }
+ 
+ .kw-borderColor-redDark {
+     border-color: #a80000;
+ }
+ 
+ .kw-borderColor-red {
+     border-color: #e81123;
+ }
+ 
+ .kw-borderColor-magentaDark {
+     border-color: #5c005c;
+ }
+ 
+ .kw-borderColor-magenta {
+     border-color: #b4009e;
+ }
+ 
+ .kw-borderColor-magentaLight {
+     border-color: #e3008c;
+ }
+ 
+ .kw-borderColor-purpleDark {
+     border-color: #32145a;
+ }
+ 
+ .kw-borderColor-purple {
+     border-color: #5c2d91;
+ }
+ 
+ .kw-borderColor-purpleLight {
+     border-color: #b4a0ff;
+ }
+ 
+ .kw-borderColor-blueDark {
+     border-color: #002050;
+ }
+ 
+ .kw-borderColor-blueMid {
+     border-color: #00188f;
+ }
+ 
+ .kw-borderColor-blue {
+     border-color: #0078d7;
+ }
+ 
+ .kw-borderColor-blueLight {
+     border-color: #00bcf2;
+ }
+ 
+ .kw-borderColor-tealDark {
+     border-color: #004b50;
+ }
+ 
+ .kw-borderColor-teal {
+     border-color: #008272;
+ }
+ 
+ .kw-borderColor-tealLight {
+     border-color: #00b294;
+ }
+ 
+ .kw-borderColor-greenDark {
+     border-color: #004b1c;
+ }
+ 
+ .kw-borderColor-green {
+     border-color: #107c10;
+ }
+ 
+ .kw-borderColor-greenLight {
+     border-color: #bad80a;
+ }
+ 
+ .kw-borderColorTop-themePrimary,
+ .kw-borderColorTop-themePrimary--hover:hover {
+     border-top-color: #0078d7;
+ }
+ 
+ .kw-font-su {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 42px;
+     font-weight: 100;
+ }
+ 
+ .kw-font-xxl {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 28px;
+     font-weight: 100;
+ }
+ 
+ .kw-font-xl {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 21px;
+     font-weight: 100;
+ }
+ 
+ .kw-font-l {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 17px;
+     font-weight: 300;
+ }
+ 
+ .kw-font-m-plus {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 15px;
+     font-weight: 400;
+ }
+ 
+ .kw-font-m {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 14px;
+     font-weight: 400;
+ }
+ 
+ .kw-font-s-plus {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 13px;
+     font-weight: 400;
+ }
+ 
+ .kw-font-s {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 12px;
+     font-weight: 400;
+ }
+ 
+ .kw-font-xs {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 11px;
+     font-weight: 400;
+ }
+ 
+ .kw-font-mi {
+     font-family: 'Segoe UI WestEuropean', 'Segoe UI', -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', sans-serif;
+     -webkit-font-smoothing: antialiased;
+     font-size: 10px;
+     font-weight: 600;
+ }
+ 
+ .kw-fontWeight-light,
+ .kw-fontWeight-light--hover:hover {
+     font-weight: 100;
+ }
+ 
+ .kw-fontWeight-semilight,
+ .kw-fontWeight-semilight--hover:hover {
+     font-weight: 300;
+ }
+ 
+ .kw-fontWeight-regular,
+ .kw-fontWeight-regular--hover:hover {
+     font-weight: 400;
+ }
+ 
+ .kw-fontWeight-semibold,
+ .kw-fontWeight-semibold--hover:hover {
+     font-weight: 600;
+ }
+ 
+ .kw-fontSize-su {
+     font-size: 42px;
+ }
+ 
+ .kw-fontSize-xxl {
+     font-size: 28px;
+ }
+ 
+ .kw-fontSize-xl {
+     font-size: 21px;
+ }
+ 
+ .kw-fontSize-l {
+     font-size: 17px;
+ }
+ 
+ .kw-fontSize-mPlus {
+     font-size: 15px;
+ }
+ 
+ .kw-fontSize-m {
+     font-size: 14px;
+ }
+ 
+ .kw-fontSize-sPlus {
+     font-size: 13px;
+ }
+ 
+ .kw-fontSize-s {
+     font-size: 12px;
+ }
+ 
+ .kw-fontSize-xs {
+     font-size: 11px;
+ }
+ 
+ .kw-fontSize-mi {
+     font-size: 10px;
+ }
+ 
+ .kw-fontColor-themeDarker,
+ .kw-fontColor-themeDarker--hover:hover {
+     color: #004578;
+ }
+ 
+ .kw-fontColor-themeDark,
+ .kw-fontColor-themeDark--hover:hover {
+     color: #005a9e;
+ }
+ 
+ .kw-fontColor-themeDarkAlt,
+ .kw-fontColor-themeDarkAlt--hover:hover {
+     color: #106ebe;
+ }
+ 
+ .kw-fontColor-themePrimary,
+ .kw-fontColor-themePrimary--hover:hover {
+     color: #0078d7;
+ }
+ 
+ .kw-fontColor-themeSecondary,
+ .kw-fontColor-themeSecondary--hover:hover {
+     color: #2488d8;
+ }
+ 
+ .kw-fontColor-themeTertiary,
+ .kw-fontColor-themeTertiary--hover:hover {
+     color: #69afe5;
+ }
+ 
+ .kw-fontColor-themeLight,
+ .kw-fontColor-themeLight--hover:hover {
+     color: #b3d6f2;
+ }
+ 
+ .kw-fontColor-themeLighter,
+ .kw-fontColor-themeLighter--hover:hover {
+     color: #deecf9;
+ }
+ 
+ .kw-fontColor-themeLighterAlt,
+ .kw-fontColor-themeLighterAlt--hover:hover {
+     color: #eff6fc;
+ }
+ 
+ .kw-fontColor-black,
+ .kw-fontColor-black--hover:hover {
+     color: #000000;
+ }
+ 
+ .kw-fontColor-neutralDark,
+ .kw-fontColor-neutralDark--hover:hover {
+     color: #212121;
+ }
+ 
+ .kw-fontColor-neutralPrimary,
+ .kw-fontColor-neutralPrimary--hover:hover {
+     color: #333333;
+ }
+ 
+ .kw-fontColor-neutralPrimaryAlt,
+ .kw-fontColor-neutralPrimaryAlt--hover:hover {
+     color: #3c3c3c;
+ }
+ 
+ .kw-fontColor-neutralSecondary,
+ .kw-fontColor-neutralSecondary--hover:hover {
+     color: #666666;
+ }
+ 
+ .kw-fontColor-neutralSecondaryAlt,
+ .kw-fontColor-neutralSecondaryAlt--hover:hover {
+     color: #767676;
+ }
+ 
+ .kw-fontColor-neutralTertiary,
+ .kw-fontColor-neutralTertiary--hover:hover {
+     color: #a6a6a6;
+ }
+ 
+ .kw-fontColor-neutralTertiaryAlt,
+ .kw-fontColor-neutralTertiaryAlt--hover:hover {
+     color: #c8c8c8;
+ }
+ 
+ .kw-fontColor-neutralLight,
+ .kw-fontColor-neutralLight--hover:hover {
+     color: #eaeaea;
+ }
+ 
+ .kw-fontColor-neutralLighter,
+ .kw-fontColor-neutralLighter--hover:hover {
+     color: #f4f4f4;
+ }
+ 
+ .kw-fontColor-neutralLighterAlt,
+ .kw-fontColor-neutralLighterAlt--hover:hover {
+     color: #f8f8f8;
+ }
+ 
+ .kw-fontColor-white,
+ .kw-fontColor-white--hover:hover {
+     color: #ffffff;
+ }
+ 
+ .kw-fontColor-yellow,
+ .kw-fontColor-yellow--hover:hover {
+     color: #ffb900;
+ }
+ 
+ .kw-fontColor-yellowLight,
+ .kw-fontColor-yellowLight--hover:hover {
+     color: #fff100;
+ }
+ 
+ .kw-fontColor-orange,
+ .kw-fontColor-orange--hover:hover {
+     color: #d83b01;
+ }
+ 
+ .kw-fontColor-orangeLight,
+ .kw-fontColor-orangeLight--hover:hover {
+     color: #ea4300;
+ }
+ 
+ .kw-fontColor-orangeLighter,
+ .kw-fontColor-orangeLighter--hover:hover {
+     color: #ff8c00;
+ }
+ 
+ .kw-fontColor-redDark,
+ .kw-fontColor-redDark--hover:hover {
+     color: #a80000;
+ }
+ 
+ .kw-fontColor-red,
+ .kw-fontColor-red--hover:hover {
+     color: #e81123;
+ }
+ 
+ .kw-fontColor-magentaDark,
+ .kw-fontColor-magentaDark--hover:hover {
+     color: #5c005c;
+ }
+ 
+ .kw-fontColor-magenta,
+ .kw-fontColor-magenta--hover:hover {
+     color: #b4009e;
+ }
+ 
+ .kw-fontColor-magentaLight,
+ .kw-fontColor-magentaLight--hover:hover {
+     color: #e3008c;
+ }
+ 
+ .kw-fontColor-purpleDark,
+ .kw-fontColor-purpleDark--hover:hover {
+     color: #32145a;
+ }
+ 
+ .kw-fontColor-purple,
+ .kw-fontColor-purple--hover:hover {
+     color: #5c2d91;
+ }
+ 
+ .kw-fontColor-purpleLight,
+ .kw-fontColor-purpleLight--hover:hover {
+     color: #b4a0ff;
+ }
+ 
+ .kw-fontColor-blueDark,
+ .kw-fontColor-blueDark--hover:hover {
+     color: #002050;
+ }
+ 
+ .kw-fontColor-blueMid,
+ .kw-fontColor-blueMid--hover:hover {
+     color: #00188f;
+ }
+ 
+ .kw-fontColor-blue,
+ .kw-fontColor-blue--hover:hover {
+     color: #0078d7;
+ }
+ 
+ .kw-fontColor-blueLight,
+ .kw-fontColor-blueLight--hover:hover {
+     color: #00bcf2;
+ }
+ 
+ .kw-fontColor-tealDark,
+ .kw-fontColor-tealDark--hover:hover {
+     color: #004b50;
+ }
+ 
+ .kw-fontColor-teal,
+ .kw-fontColor-teal--hover:hover {
+     color: #008272;
+ }
+ 
+ .kw-fontColor-tealLight,
+ .kw-fontColor-tealLight--hover:hover {
+     color: #00b294;
+ }
+ 
+ .kw-fontColor-greenDark,
+ .kw-fontColor-greenDark--hover:hover {
+     color: #004b1c;
+ }
+ 
+ .kw-fontColor-green,
+ .kw-fontColor-green--hover:hover {
+     color: #107c10;
+ }
+ 
+ .kw-fontColor-greenLight,
+ .kw-fontColor-greenLight--hover:hover {
+     color: #bad80a;
+ }
+ 
+ .kw-fontColor-info,
+ .kw-fontColor-info--hover:hover {
+     color: #767676;
+ }
+ 
+ .kw-fontColor-success,
+ .kw-fontColor-success--hover:hover {
+     color: #107c10;
+ }
+ 
+ .kw-fontColor-alert,
+ .kw-fontColor-alert--hover:hover {
+     color: #d83b01;
+ }
+ 
+ .kw-fontColor-warning,
+ .kw-fontColor-warning--hover:hover {
+     color: #767676;
+ }
+ 
+ .kw-fontColor-severeWarning,
+ .kw-fontColor-severeWarning--hover:hover {
+     color: #d83b01;
+ }
+ 
+ .kw-fontColor-error,
+ .kw-fontColor-error--hover:hover {
+     color: #a80000;
+ }
+ 
+ /*
+   Your use of the content in the files referenced here are subject to the terms of the license at http://aka.ms/fabric-font-license
+ */
+ @font-face {
+     font-family: 'Segoe UI WestEuropean';
+     src: local('Segoe UI Light'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-light.woff2') format('woff2'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-light.woff') format('woff'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-light.ttf') format('truetype');
+     font-weight: 100;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'Segoe UI WestEuropean';
+     src: local('Segoe UI'), url('../../fonts/segoeui-regular.woff2') format('woff2'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-regular.woff') format('woff'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-regular.ttf') format('truetype');
+     font-weight: 400;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'Segoe UI WestEuropean';
+     src: local('Segoe UI Semibold'), url('../../fonts/segoeui-semibold.woff2') format('woff2'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-semibold.woff') format('woff'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-semibold.ttf') format('truetype');
+     font-weight: 600;
+     font-style: normal;
+ }
+ 
+ @font-face {
+     font-family: 'Segoe UI WestEuropean';
+     src: local('Segoe UI Semilight'), url('../../fonts/segoeui-semilight.woff2') format('woff2'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-semilight.woff') format('woff'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/fonts//segoeui-westeuropean/segoeui-semilight.ttf') format('truetype');
+     font-weight: 200;
+     font-style: normal;
+ }
+ 
+ /*
+   Your use of the content in the files referenced here are subject to the terms of the license at http://aka.ms/fabric-font-license
+ */
+ /*
+   Your use of the content in the files referenced here are subject to the terms of the license at http://aka.ms/fabric-font-license
+ */
+ @font-face {
+     font-family: 'FabricMDL2Icons';
+     src: url('../../fonts/fabricmdl2icons.woff') format('woff'), url('https://spoprod-a.akamaihd.net/files/fabric/assets/icons/fabricmdl2icons.ttf') format('truetype');
+     font-weight: normal;
+     font-style: normal;
+ }
+ 
+ .kw-Icon {
+     -moz-osx-font-smoothing: grayscale;
+     -webkit-font-smoothing: antialiased;
+     display: inline-block;
+     font-family: 'FabricMDL2Icons';
+     font-style: normal;
+     font-weight: normal;
+     speak: none;
+ }
+ 
+ .kw-Icon--circle {
+     position: relative;
+     display: inline-block;
+     font-size: 1rem;
+     width: 1em;
+     height: 1em;
+     margin: 0 0.5em 0 0;
+     padding: 0;
+     text-align: left;
+     -webkit-font-smoothing: antialiased;
+ }
+ 
+     .kw-Icon--circle::before,
+     .kw-Icon--circle::after {
+         line-height: 1;
+         font-size: inherit;
+     }
+ 
+     .kw-Icon--circle::before {
+         display: block;
+         width: 100%;
+         height: 100%;
+         margin: 0;
+         padding: 0;
+         vertical-align: top;
+         position: absolute;
+     }
+ 
+     .kw-Icon--circle::after {
+         content: '\e000';
+         position: absolute;
+         top: 0;
+         left: 0;
+         -ms-transform: scale(2);
+         transform: scale(2);
+         -ms-transform-origin: 50% 50%;
+         transform-origin: 50% 50%;
+         z-index: 0;
+     }
+ 
+ .kw-Icon--xs {
+     font-size: 10px;
+ }
+ 
+ .kw-Icon--s {
+     font-size: 12px;
+ }
+ 
+ .kw-Icon--m {
+     font-size: 16px;
+ }
+ 
+ .kw-Icon--l {
+     font-size: 20px;
+ }
+ 
+ .kw-Icon--DecreaseIndentLegacy::before {
+     content: '\E290';
+ }
+ 
+ .kw-Icon--IncreaseIndentLegacy::before {
+     content: '\E291';
+ }
+ 
+ .kw-Icon--GlobalNavButton::before {
+     content: '\E700';
+ }
+ 
+ .kw-Icon--InternetSharing::before {
+     content: '\E704';
+ }
+ 
+ .kw-Icon--Brightness::before {
+     content: '\E706';
+ }
+ 
+ .kw-Icon--MapPin::before {
+     content: '\E707';
+ }
+ 
+ .kw-Icon--Airplane::before {
+     content: '\E709';
+ }
+ 
+ .kw-Icon--Tablet::before {
+     content: '\E70A';
+ }
+ 
+ .kw-Icon--QuickNote::before {
+     content: '\E70B';
+ }
+ 
+ .kw-Icon--ChevronDown::before {
+     content: '\E70D';
+ }
+ 
+ .kw-Icon--ChevronUp::before {
+     content: '\E70E';
+ }
+ 
+ .kw-Icon--Edit::before {
+     content: '\E70F';
+ }
+ 
+ .kw-Icon--Add::before {
+     content: '\E710';
+ }
+ 
+ .kw-Icon--Cancel::before {
+     content: '\E711';
+ }
+ 
+ .kw-Icon--More::before {
+     content: '\E712';
+ }
+ 
+ .kw-Icon--Settings::before {
+     content: '\E713';
+ }
+ 
+ .kw-Icon--Video::before {
+     content: '\E714';
+ }
+ 
+ .kw-Icon--Mail::before {
+     content: '\E715';
+ }
+ 
+ .kw-Icon--People::before {
+     content: '\E716';
+ }
+ 
+ .kw-Icon--Phone::before {
+     content: '\E717';
+ }
+ 
+ .kw-Icon--Pin::before {
+     content: '\E718';
+ }
+ 
+ .kw-Icon--Shop::before {
+     content: '\E719';
+ }
+ 
+ .kw-Icon--Link::before {
+     content: '\E71B';
+ }
+ 
+ .kw-Icon--Filter::before {
+     content: '\E71C';
+ }
+ 
+ .kw-Icon--Zoom::before {
+     content: '\E71E';
+ }
+ 
+ .kw-Icon--ZoomOut::before {
+     content: '\E71F';
+ }
+ 
+ .kw-Icon--Microphone::before {
+     content: '\E720';
+ }
+ 
+ .kw-Icon--Search::before {
+     content: '\E721';
+ }
+ 
+ .kw-Icon--Camera::before {
+     content: '\E722';
+ }
+ 
+ .kw-Icon--Attach::before {
+     content: '\E723';
+ }
+ 
+ .kw-Icon--Send::before {
+     content: '\E724';
+ }
+ 
+ .kw-Icon--FavoriteList::before {
+     content: '\E728';
+ }
+ 
+ .kw-Icon--PageSolid::before {
+     content: '\E729';
+ }
+ 
+ .kw-Icon--Forward::before {
+     content: '\E72A';
+ }
+ 
+ .kw-Icon--Back::before {
+     content: '\E72B';
+ }
+ 
+ .kw-Icon--Refresh::before {
+     content: '\E72C';
+ }
+ 
+ .kw-Icon--Share::before {
+     content: '\E72D';
+ }
+ 
+ .kw-Icon--Lock::before {
+     content: '\E72E';
+ }
+ 
+ .kw-Icon--EMI::before {
+     content: '\E731';
+ }
+ 
+ .kw-Icon--MiniLink::before {
+     content: '\E732';
+ }
+ 
+ .kw-Icon--Blocked::before {
+     content: '\E733';
+ }
+ 
+ .kw-Icon--FavoriteStar::before {
+     content: '\E734';
+ }
+ 
+ .kw-Icon--FavoriteStarFill::before {
+     content: '\E735';
+ }
+ 
+ .kw-Icon--ReadingMode::before {
+     content: '\E736';
+ }
+ 
+ .kw-Icon--Remove::before {
+     content: '\E738';
+ }
+ 
+ .kw-Icon--Checkbox::before {
+     content: '\E739';
+ }
+ 
+ .kw-Icon--CheckboxComposite::before {
+     content: '\E73A';
+ }
+ 
+ .kw-Icon--CheckboxIndeterminate::before {
+     content: '\E73C';
+ }
+ 
+ .kw-Icon--CheckMark::before {
+     content: '\E73E';
+ }
+ 
+ .kw-Icon--BackToWindow::before {
+     content: '\E73F';
+ }
+ 
+ .kw-Icon--FullScreen::before {
+     content: '\E740';
+ }
+ 
+ .kw-Icon--Print::before {
+     content: '\E749';
+ }
+ 
+ .kw-Icon--Up::before {
+     content: '\E74A';
+ }
+ 
+ .kw-Icon--Down::before {
+     content: '\E74B';
+ }
+ 
+ .kw-Icon--Delete::before {
+     content: '\E74D';
+ }
+ 
+ .kw-Icon--Save::before {
+     content: '\E74E';
+ }
+ 
+ .kw-Icon--Sad::before {
+     content: '\E757';
+ }
+ 
+ .kw-Icon--SIPMove::before {
+     content: '\E759';
+ }
+ 
+ .kw-Icon--EraseTool::before {
+     content: '\E75C';
+ }
+ 
+ .kw-Icon--GripperTool::before {
+     content: '\E75E';
+ }
+ 
+ .kw-Icon--Dialpad::before {
+     content: '\E75F';
+ }
+ 
+ .kw-Icon--PageLeft::before {
+     content: '\E760';
+ }
+ 
+ .kw-Icon--PageRight::before {
+     content: '\E761';
+ }
+ 
+ .kw-Icon--MultiSelect::before {
+     content: '\E762';
+ }
+ 
+ .kw-Icon--Play::before {
+     content: '\E768';
+ }
+ 
+ .kw-Icon--Pause::before {
+     content: '\E769';
+ }
+ 
+ .kw-Icon--ChevronLeft::before {
+     content: '\E76B';
+ }
+ 
+ .kw-Icon--ChevronRight::before {
+     content: '\E76C';
+ }
+ 
+ .kw-Icon--Emoji2::before {
+     content: '\E76E';
+ }
+ 
+ .kw-Icon--System::before {
+     content: '\E770';
+ }
+ 
+ .kw-Icon--Globe::before {
+     content: '\E774';
+ }
+ 
+ .kw-Icon--ContactInfo::before {
+     content: '\E779';
+ }
+ 
+ .kw-Icon--Unpin::before {
+     content: '\E77A';
+ }
+ 
+ .kw-Icon--Contact::before {
+     content: '\E77B';
+ }
+ 
+ .kw-Icon--Memo::before {
+     content: '\E77C';
+ }
+ 
+ .kw-Icon--WindowsLogo::before {
+     content: '\E782';
+ }
+ 
+ .kw-Icon--Error::before {
+     content: '\E783';
+ }
+ 
+ .kw-Icon--Unlock::before {
+     content: '\E785';
+ }
+ 
+ .kw-Icon--Calendar::before {
+     content: '\E787';
+ }
+ 
+ .kw-Icon--Megaphone::before {
+     content: '\E789';
+ }
+ 
+ .kw-Icon--AutoEnhanceOn::before {
+     content: '\E78D';
+ }
+ 
+ .kw-Icon--AutoEnhanceOff::before {
+     content: '\E78E';
+ }
+ 
+ .kw-Icon--Color::before {
+     content: '\E790';
+ }
+ 
+ .kw-Icon--SaveAs::before {
+     content: '\E792';
+ }
+ 
+ .kw-Icon--Light::before {
+     content: '\E793';
+ }
+ 
+ .kw-Icon--Filters::before {
+     content: '\E795';
+ }
+ 
+ .kw-Icon--Contrast::before {
+     content: '\E7A1';
+ }
+ 
+ .kw-Icon--Redo::before {
+     content: '\E7A6';
+ }
+ 
+ .kw-Icon--Undo::before {
+     content: '\E7A7';
+ }
+ 
+ .kw-Icon--PhotoCollection::before {
+     content: '\E7AA';
+ }
+ 
+ .kw-Icon--Album::before {
+     content: '\E7AB';
+ }
+ 
+ .kw-Icon--Rotate::before {
+     content: '\E7AD';
+ }
+ 
+ .kw-Icon--PanoIndicator::before {
+     content: '\E7B0';
+ }
+ 
+ .kw-Icon--ThumbnailView::before {
+     content: '\E7B6';
+ }
+ 
+ .kw-Icon--Package::before {
+     content: '\E7B8';
+ }
+ 
+ .kw-Icon--Warning::before {
+     content: '\E7BA';
+ }
+ 
+ .kw-Icon--Financial::before {
+     content: '\E7BB';
+ }
+ 
+ .kw-Icon--ShoppingCart::before {
+     content: '\E7BF';
+ }
+ 
+ .kw-Icon--Train::before {
+     content: '\E7C0';
+ }
+ 
+ .kw-Icon--Flag::before {
+     content: '\E7C1';
+ }
+ 
+ .kw-Icon--Move::before {
+     content: '\E7C2';
+ }
+ 
+ .kw-Icon--Page::before {
+     content: '\E7C3';
+ }
+ 
+ .kw-Icon--TouchPointer::before {
+     content: '\E7C9';
+ }
+ 
+ .kw-Icon--Merge::before {
+     content: '\E7D5';
+ }
+ 
+ .kw-Icon--TurnRight::before {
+     content: '\E7DB';
+ }
+ 
+ .kw-Icon--Ferry::before {
+     content: '\E7E3';
+ }
+ 
+ .kw-Icon--Tab::before {
+     content: '\E7E9';
+ }
+ 
+ .kw-Icon--Admin::before {
+     content: '\E7EF';
+ }
+ 
+ .kw-Icon--TVMonitor::before {
+     content: '\E7F4';
+ }
+ 
+ .kw-Icon--Speakers::before {
+     content: '\E7F5';
+ }
+ 
+ .kw-Icon--Nav2DMapView::before {
+     content: '\E800';
+ }
+ 
+ .kw-Icon--Car::before {
+     content: '\E804';
+ }
+ 
+ .kw-Icon--EatDrink::before {
+     content: '\E807';
+ }
+ 
+ .kw-Icon--LocationCircle::before {
+     content: '\E80E';
+ }
+ 
+ .kw-Icon--Home::before {
+     content: '\E80F';
+ }
+ 
+ .kw-Icon--SwitcherStartEnd::before {
+     content: '\E810';
+ }
+ 
+ .kw-Icon--IncidentTriangle::before {
+     content: '\E814';
+ }
+ 
+ .kw-Icon--Touch::before {
+     content: '\E815';
+ }
+ 
+ .kw-Icon--MapDirections::before {
+     content: '\E816';
+ }
+ 
+ .kw-Icon--History::before {
+     content: '\E81C';
+ }
+ 
+ .kw-Icon--Location::before {
+     content: '\E81D';
+ }
+ 
+ .kw-Icon--Work::before {
+     content: '\E821';
+ }
+ 
+ .kw-Icon--Recent::before {
+     content: '\E823';
+ }
+ 
+ .kw-Icon--Hotel::before {
+     content: '\E824';
+ }
+ 
+ .kw-Icon--LocationDot::before {
+     content: '\E827';
+ }
+ 
+ .kw-Icon--News::before {
+     content: '\E900';
+ }
+ 
+ .kw-Icon--Chat::before {
+     content: '\E901';
+ }
+ 
+ .kw-Icon--Group::before {
+     content: '\E902';
+ }
+ 
+ .kw-Icon--View::before {
+     content: '\E890';
+ }
+ 
+ .kw-Icon--Clear::before {
+     content: '\E894';
+ }
+ 
+ .kw-Icon--Sync::before {
+     content: '\E895';
+ }
+ 
+ .kw-Icon--Download::before {
+     content: '\E896';
+ }
+ 
+ .kw-Icon--Help::before {
+     content: '\E897';
+ }
+ 
+ .kw-Icon--Upload::before {
+     content: '\E898';
+ }
+ 
+ .kw-Icon--Emoji::before {
+     content: '\E899';
+ }
+ 
+ .kw-Icon--MailForward::before {
+     content: '\E89C';
+ }
+ 
+ .kw-Icon--ClosePane::before {
+     content: '\E89F';
+ }
+ 
+ .kw-Icon--OpenPane::before {
+     content: '\E8A0';
+ }
+ 
+ .kw-Icon--PreviewLink::before {
+     content: '\E8A1';
+ }
+ 
+ .kw-Icon--ZoomIn::before {
+     content: '\E8A3';
+ }
+ 
+ .kw-Icon--Bookmarks::before {
+     content: '\E8A4';
+ }
+ 
+ .kw-Icon--Document::before {
+     content: '\E8A5';
+ }
+ 
+ .kw-Icon--ProtectedDocument::before {
+     content: '\E8A6';
+ }
+ 
+ .kw-Icon--OpenInNewWindow::before {
+     content: '\E8A7';
+ }
+ 
+ .kw-Icon--MailFill::before {
+     content: '\E8A8';
+ }
+ 
+ .kw-Icon--ViewAll::before {
+     content: '\E8A9';
+ }
+ 
+ .kw-Icon--Switch::before {
+     content: '\E8AB';
+ }
+ 
+ .kw-Icon--Rename::before {
+     content: '\E8AC';
+ }
+ 
+ .kw-Icon--Folder::before {
+     content: '\E8B7';
+ }
+ 
+ .kw-Icon--Picture::before {
+     content: '\E8B9';
+ }
+ 
+ .kw-Icon--ShowResults::before {
+     content: '\E8BC';
+ }
+ 
+ .kw-Icon--Message::before {
+     content: '\E8BD';
+ }
+ 
+ .kw-Icon--CalendarDay::before {
+     content: '\E8BF';
+ }
+ 
+ .kw-Icon--CalendarWeek::before {
+     content: '\E8C0';
+ }
+ 
+ .kw-Icon--MailReplyAll::before {
+     content: '\E8C2';
+ }
+ 
+ .kw-Icon--Read::before {
+     content: '\E8C3';
+ }
+ 
+ .kw-Icon--PaymentCard::before {
+     content: '\E8C7';
+ }
+ 
+ .kw-Icon--Copy::before {
+     content: '\E8C8';
+ }
+ 
+ .kw-Icon--Important::before {
+     content: '\E8C9';
+ }
+ 
+ .kw-Icon--MailReply::before {
+     content: '\E8CA';
+ }
+ 
+ .kw-Icon--Sort::before {
+     content: '\E8CB';
+ }
+ 
+ .kw-Icon--GotoToday::before {
+     content: '\E8D1';
+ }
+ 
+ .kw-Icon--Font::before {
+     content: '\E8D2';
+ }
+ 
+ .kw-Icon--FontColor::before {
+     content: '\E8D3';
+ }
+ 
+ .kw-Icon--FolderFill::before {
+     content: '\E8D5';
+ }
+ 
+ .kw-Icon--Permissions::before {
+     content: '\E8D7';
+ }
+ 
+ .kw-Icon--DisableUpdates::before {
+     content: '\E8D8';
+ }
+ 
+ .kw-Icon--Unfavorite::before {
+     content: '\E8D9';
+ }
+ 
+ .kw-Icon--Italic::before {
+     content: '\E8DB';
+ }
+ 
+ .kw-Icon--Underline::before {
+     content: '\E8DC';
+ }
+ 
+ .kw-Icon--Bold::before {
+     content: '\E8DD';
+ }
+ 
+ .kw-Icon--MoveToFolder::before {
+     content: '\E8DE';
+ }
+ 
+ .kw-Icon--Dislike::before {
+     content: '\E8E0';
+ }
+ 
+ .kw-Icon--Like::before {
+     content: '\E8E1';
+ }
+ 
+ .kw-Icon--AlignRight::before {
+     content: '\E8E2';
+ }
+ 
+ .kw-Icon--AlignCenter::before {
+     content: '\E8E3';
+ }
+ 
+ .kw-Icon--AlignLeft::before {
+     content: '\E8E4';
+ }
+ 
+ .kw-Icon--OpenFile::before {
+     content: '\E8E5';
+ }
+ 
+ .kw-Icon--FontDecrease::before {
+     content: '\E8E7';
+ }
+ 
+ .kw-Icon--FontIncrease::before {
+     content: '\E8E8';
+ }
+ 
+ .kw-Icon--FontSize::before {
+     content: '\E8E9';
+ }
+ 
+ .kw-Icon--CellPhone::before {
+     content: '\E8EA';
+ }
+ 
+ .kw-Icon--Tag::before {
+     content: '\E8EC';
+ }
+ 
+ .kw-Icon--Library::before {
+     content: '\E8F1';
+ }
+ 
+ .kw-Icon--PostUpdate::before {
+     content: '\E8F3';
+ }
+ 
+ .kw-Icon--NewFolder::before {
+     content: '\E8F4';
+ }
+ 
+ .kw-Icon--CalendarReply::before {
+     content: '\E8F5';
+ }
+ 
+ .kw-Icon--UnsyncFolder::before {
+     content: '\E8F6';
+ }
+ 
+ .kw-Icon--SyncFolder::before {
+     content: '\E8F7';
+ }
+ 
+ .kw-Icon--BlockContact::before {
+     content: '\E8F8';
+ }
+ 
+ .kw-Icon--AddFriend::before {
+     content: '\E8FA';
+ }
+ 
+ .kw-Icon--BulletedList::before {
+     content: '\E8FD';
+ }
+ 
+ .kw-Icon--Preview::before {
+     content: '\E8FF';
+ }
+ 
+ .kw-Icon--DockLeft::before {
+     content: '\E90C';
+ }
+ 
+ .kw-Icon--DockRight::before {
+     content: '\E90D';
+ }
+ 
+ .kw-Icon--Repair::before {
+     content: '\E90F';
+ }
+ 
+ .kw-Icon--Accounts::before {
+     content: '\E910';
+ }
+ 
+ .kw-Icon--RadioBullet::before {
+     content: '\E915';
+ }
+ 
+ .kw-Icon--Stopwatch::before {
+     content: '\E916';
+ }
+ 
+ .kw-Icon--Clock::before {
+     content: '\E917';
+ }
+ 
+ .kw-Icon--WorldClock::before {
+     content: '\E918';
+ }
+ 
+ .kw-Icon--AlarmClock::before {
+     content: '\E919';
+ }
+ 
+ .kw-Icon--Hospital::before {
+     content: '\E91D';
+ }
+ 
+ .kw-Icon--Timer::before {
+     content: '\E91E';
+ }
+ 
+ .kw-Icon--FullCircleMask::before {
+     content: '\E91F';
+ }
+ 
+ .kw-Icon--LocationFill::before {
+     content: '\E920';
+ }
+ 
+ .kw-Icon--ChromeMinimize::before {
+     content: '\E921';
+ }
+ 
+ .kw-Icon--Annotation::before {
+     content: '\E924';
+ }
+ 
+ .kw-Icon--ChromeClose::before {
+     content: '\E8BB';
+ }
+ 
+ .kw-Icon--Accept::before {
+     content: '\E8FB';
+ }
+ 
+ .kw-Icon--Fingerprint::before {
+     content: '\E928';
+ }
+ 
+ .kw-Icon--Handwriting::before {
+     content: '\E929';
+ }
+ 
+ .kw-Icon--StackIndicator::before {
+     content: '\E7FF';
+ }
+ 
+ .kw-Icon--Completed::before {
+     content: '\E930';
+ }
+ 
+ .kw-Icon--Label::before {
+     content: '\E932';
+ }
+ 
+ .kw-Icon--FlickDown::before {
+     content: '\E935';
+ }
+ 
+ .kw-Icon--FlickUp::before {
+     content: '\E936';
+ }
+ 
+ .kw-Icon--FlickLeft::before {
+     content: '\E937';
+ }
+ 
+ .kw-Icon--FlickRight::before {
+     content: '\E938';
+ }
+ 
+ .kw-Icon--MusicInCollection::before {
+     content: '\E940';
+ }
+ 
+ .kw-Icon--OneDrive::before {
+     content: '\E941';
+ }
+ 
+ .kw-Icon--CompassNW::before {
+     content: '\E942';
+ }
+ 
+ .kw-Icon--Code::before {
+     content: '\E943';
+ }
+ 
+ .kw-Icon--LightningBolt::before {
+     content: '\E945';
+ }
+ 
+ .kw-Icon--Info::before {
+     content: '\E946';
+ }
+ 
+ .kw-Icon--CalculatorAddition::before {
+     content: '\E948';
+ }
+ 
+ .kw-Icon--CalculatorSubtract::before {
+     content: '\E949';
+ }
+ 
+ .kw-Icon--PrintfaxPrinterFile::before {
+     content: '\E956';
+ }
+ 
+ .kw-Icon--Health::before {
+     content: '\E95E';
+ }
+ 
+ .kw-Icon--ChevronUpSmall::before {
+     content: '\E96D';
+ }
+ 
+ .kw-Icon--ChevronDownSmall::before {
+     content: '\E96E';
+ }
+ 
+ .kw-Icon--ChevronLeftSmall::before {
+     content: '\E96F';
+ }
+ 
+ .kw-Icon--ChevronRightSmall::before {
+     content: '\E970';
+ }
+ 
+ .kw-Icon--ChevronUpMed::before {
+     content: '\E971';
+ }
+ 
+ .kw-Icon--ChevronDownMed::before {
+     content: '\E972';
+ }
+ 
+ .kw-Icon--ChevronLeftMed::before {
+     content: '\E973';
+ }
+ 
+ .kw-Icon--ChevronRightMed::before {
+     content: '\E974';
+ }
+ 
+ .kw-Icon--Dictionary::before {
+     content: '\E82D';
+ }
+ 
+ .kw-Icon--ChromeBack::before {
+     content: '\E830';
+ }
+ 
+ .kw-Icon--PC1::before {
+     content: '\E977';
+ }
+ 
+ .kw-Icon--PresenceChickletVideo::before {
+     content: '\E979';
+ }
+ 
+ .kw-Icon--Reply::before {
+     content: '\E97A';
+ }
+ 
+ .kw-Icon--DoubleChevronLeftMed::before {
+     content: '\E991';
+ }
+ 
+ .kw-Icon--Volume0::before {
+     content: '\E992';
+ }
+ 
+ .kw-Icon--Volume1::before {
+     content: '\E993';
+ }
+ 
+ .kw-Icon--Volume2::before {
+     content: '\E994';
+ }
+ 
+ .kw-Icon--Volume3::before {
+     content: '\E995';
+ }
+ 
+ .kw-Icon--CaretHollow::before {
+     content: '\E817';
+ }
+ 
+ .kw-Icon--CaretSolid::before {
+     content: '\E818';
+ }
+ 
+ .kw-Icon--FolderOpen::before {
+     content: '\E838';
+ }
+ 
+ .kw-Icon--Pinned::before {
+     content: '\E840';
+ }
+ 
+ .kw-Icon--PinnedFill::before {
+     content: '\E842';
+ }
+ 
+ .kw-Icon--Chart::before {
+     content: '\E999';
+ }
+ 
+ .kw-Icon--BidiLtr::before {
+     content: '\E9AA';
+ }
+ 
+ .kw-Icon--BidiRtl::before {
+     content: '\E9AB';
+ }
+ 
+ .kw-Icon--RevToggleKey::before {
+     content: '\E845';
+ }
+ 
+ .kw-Icon--RightDoubleQuote::before {
+     content: '\E9B1';
+ }
+ 
+ .kw-Icon--Sunny::before {
+     content: '\E9BD';
+ }
+ 
+ .kw-Icon--CloudWeather::before {
+     content: '\E9BE';
+ }
+ 
+ .kw-Icon--Cloudy::before {
+     content: '\E9BF';
+ }
+ 
+ .kw-Icon--PartlyCloudyDay::before {
+     content: '\E9C0';
+ }
+ 
+ .kw-Icon--PartlyCloudyNight::before {
+     content: '\E9C1';
+ }
+ 
+ .kw-Icon--ClearNight::before {
+     content: '\E9C2';
+ }
+ 
+ .kw-Icon--RainShowersDay::before {
+     content: '\E9C3';
+ }
+ 
+ .kw-Icon--Rain::before {
+     content: '\E9C4';
+ }
+ 
+ .kw-Icon--Thunderstorms::before {
+     content: '\E9C6';
+ }
+ 
+ .kw-Icon--RainSnow::before {
+     content: '\E9C7';
+ }
+ 
+ .kw-Icon--Snow::before {
+     content: '\EB46';
+ }
+ 
+ .kw-Icon--BlowingSnow::before {
+     content: '\E9C9';
+ }
+ 
+ .kw-Icon--Frigid::before {
+     content: '\E9CA';
+ }
+ 
+ .kw-Icon--Fog::before {
+     content: '\E9CB';
+ }
+ 
+ .kw-Icon--Squalls::before {
+     content: '\E9CC';
+ }
+ 
+ .kw-Icon--Duststorm::before {
+     content: '\E9CD';
+ }
+ 
+ .kw-Icon--Precipitation::before {
+     content: '\E9CF';
+ }
+ 
+ .kw-Icon--Ringer::before {
+     content: '\EA8F';
+ }
+ 
+ .kw-Icon--PDF::before {
+     content: '\EA90';
+ }
+ 
+ .kw-Icon--SortLines::before {
+     content: '\E9D0';
+ }
+ 
+ .kw-Icon--Ribbon::before {
+     content: '\E9D1';
+ }
+ 
+ .kw-Icon--CheckList::before {
+     content: '\E9D5';
+ }
+ 
+ .kw-Icon--Generate::before {
+     content: '\E9DA';
+ }
+ 
+ .kw-Icon--Equalizer::before {
+     content: '\E9E9';
+ }
+ 
+ .kw-Icon--BarChartHorizontal::before {
+     content: '\E9EB';
+ }
+ 
+ .kw-Icon--Freezing::before {
+     content: '\E9EF';
+ }
+ 
+ .kw-Icon--SnowShowerDay::before {
+     content: '\E9FD';
+ }
+ 
+ .kw-Icon--HailDay::before {
+     content: '\EA00';
+ }
+ 
+ .kw-Icon--WorkFlow::before {
+     content: '\EA01';
+ }
+ 
+ .kw-Icon--StoreLogoMed::before {
+     content: '\EA04';
+ }
+ 
+ .kw-Icon--RainShowersNight::before {
+     content: '\EA0F';
+ }
+ 
+ .kw-Icon--SnowShowerNight::before {
+     content: '\EA11';
+ }
+ 
+ .kw-Icon--HailNight::before {
+     content: '\EA13';
+ }
+ 
+ .kw-Icon--Info2::before {
+     content: '\EA1F';
+ }
+ 
+ .kw-Icon--StoreLogo::before {
+     content: '\EA96';
+ }
+ 
+ .kw-Icon--MultiSelectMirrored::before {
+     content: '\EA98';
+ }
+ 
+ .kw-Icon--Broom::before {
+     content: '\EA99';
+ }
+ 
+ .kw-Icon--MusicInCollectionFill::before {
+     content: '\EA36';
+ }
+ 
+ .kw-Icon--List::before {
+     content: '\EA37';
+ }
+ 
+ .kw-Icon--Asterisk::before {
+     content: '\EA38';
+ }
+ 
+ .kw-Icon--ErrorBadge::before {
+     content: '\EA39';
+ }
+ 
+ .kw-Icon--CircleRing::before {
+     content: '\EA3A';
+ }
+ 
+ .kw-Icon--CircleFill::before {
+     content: '\EA3B';
+ }
+ 
+ .kw-Icon--BookmarksMirrored::before {
+     content: '\EA41';
+ }
+ 
+ .kw-Icon--BulletedListMirrored::before {
+     content: '\EA42';
+ }
+ 
+ .kw-Icon--CaretHollowMirrored::before {
+     content: '\EA45';
+ }
+ 
+ .kw-Icon--CaretSolidMirrored::before {
+     content: '\EA46';
+ }
+ 
+ .kw-Icon--ChromeBackMirrored::before {
+     content: '\EA47';
+ }
+ 
+ .kw-Icon--ClosePaneMirrored::before {
+     content: '\EA49';
+ }
+ 
+ .kw-Icon--DockLeftMirrored::before {
+     content: '\EA4C';
+ }
+ 
+ .kw-Icon--DoubleChevronLeftMedMirrored::before {
+     content: '\EA4D';
+ }
+ 
+ .kw-Icon--HelpMirrored::before {
+     content: '\EA51';
+ }
+ 
+ .kw-Icon--ListMirrored::before {
+     content: '\EA55';
+ }
+ 
+ .kw-Icon--MailForwardMirrored::before {
+     content: '\EA56';
+ }
+ 
+ .kw-Icon--MailReplyMirrored::before {
+     content: '\EA57';
+ }
+ 
+ .kw-Icon--MailReplyAllMirrored::before {
+     content: '\EA58';
+ }
+ 
+ .kw-Icon--OpenPaneMirrored::before {
+     content: '\EA5B';
+ }
+ 
+ .kw-Icon--SendMirrored::before {
+     content: '\EA63';
+ }
+ 
+ .kw-Icon--ShowResultsMirrored::before {
+     content: '\EA65';
+ }
+ 
+ .kw-Icon--ThumbnailViewMirrored::before {
+     content: '\EA67';
+ }
+ 
+ .kw-Icon--Lightbulb::before {
+     content: '\EA80';
+ }
+ 
+ .kw-Icon--StatusTriangle::before {
+     content: '\EA82';
+ }
+ 
+ .kw-Icon--VolumeDisabled::before {
+     content: '\EA85';
+ }
+ 
+ .kw-Icon--Puzzle::before {
+     content: '\EA86';
+ }
+ 
+ .kw-Icon--EmojiNeutral::before {
+     content: '\EA87';
+ }
+ 
+ .kw-Icon--EmojiDisappointed::before {
+     content: '\EA88';
+ }
+ 
+ .kw-Icon--HomeSolid::before {
+     content: '\EA8A';
+ }
+ 
+ .kw-Icon--Cocktails::before {
+     content: '\EA9D';
+ }
+ 
+ .kw-Icon--Articles::before {
+     content: '\EAC1';
+ }
+ 
+ .kw-Icon--Cycling::before {
+     content: '\EAC7';
+ }
+ 
+ .kw-Icon--DietPlanNotebook::before {
+     content: '\EAC8';
+ }
+ 
+ .kw-Icon--Pill::before {
+     content: '\EACB';
+ }
+ 
+ .kw-Icon--Running::before {
+     content: '\EADA';
+ }
+ 
+ .kw-Icon--Weights::before {
+     content: '\EADB';
+ }
+ 
+ .kw-Icon--BarChart4::before {
+     content: '\EAE7';
+ }
+ 
+ .kw-Icon--CirclePlus::before {
+     content: '\EAEE';
+ }
+ 
+ .kw-Icon--Coffee::before {
+     content: '\EAEF';
+ }
+ 
+ .kw-Icon--Cotton::before {
+     content: '\EAF3';
+ }
+ 
+ .kw-Icon--Market::before {
+     content: '\EAFC';
+ }
+ 
+ .kw-Icon--Money::before {
+     content: '\EAFD';
+ }
+ 
+ .kw-Icon--PieDouble::before {
+     content: '\EB04';
+ }
+ 
+ .kw-Icon--RemoveFilter::before {
+     content: '\EB08';
+ }
+ 
+ .kw-Icon--StockDown::before {
+     content: '\EB0F';
+ }
+ 
+ .kw-Icon--StockUp::before {
+     content: '\EB11';
+ }
+ 
+ .kw-Icon--Cricket::before {
+     content: '\EB1E';
+ }
+ 
+ .kw-Icon--Golf::before {
+     content: '\EB1F';
+ }
+ 
+ .kw-Icon--Baseball::before {
+     content: '\EB20';
+ }
+ 
+ .kw-Icon--Soccer::before {
+     content: '\EB21';
+ }
+ 
+ .kw-Icon--MoreSports::before {
+     content: '\EB22';
+ }
+ 
+ .kw-Icon--AutoRacing::before {
+     content: '\EB24';
+ }
+ 
+ .kw-Icon--CollegeHoops::before {
+     content: '\EB25';
+ }
+ 
+ .kw-Icon--CollegeFootball::before {
+     content: '\EB26';
+ }
+ 
+ .kw-Icon--ProFootball::before {
+     content: '\EB27';
+ }
+ 
+ .kw-Icon--ProHockey::before {
+     content: '\EB28';
+ }
+ 
+ .kw-Icon--Rugby::before {
+     content: '\EB2D';
+ }
+ 
+ .kw-Icon--Tennis::before {
+     content: '\EB33';
+ }
+ 
+ .kw-Icon--Arrivals::before {
+     content: '\EB34';
+ }
+ 
+ .kw-Icon--Design::before {
+     content: '\EB3C';
+ }
+ 
+ .kw-Icon--Website::before {
+     content: '\EB41';
+ }
+ 
+ .kw-Icon--Drop::before {
+     content: '\EB42';
+ }
+ 
+ .kw-Icon--Snow::before {
+     content: '\EB46';
+ }
+ 
+ .kw-Icon--BusSolid::before {
+     content: '\EB47';
+ }
+ 
+ .kw-Icon--FerrySolid::before {
+     content: '\EB48';
+ }
+ 
+ .kw-Icon--TrainSolid::before {
+     content: '\EB4D';
+ }
+ 
+ .kw-Icon--Heart::before {
+     content: '\EB51';
+ }
+ 
+ .kw-Icon--HeartFill::before {
+     content: '\EB52';
+ }
+ 
+ .kw-Icon--Ticket::before {
+     content: '\EB54';
+ }
+ 
+ .kw-Icon--AzureLogo::before {
+     content: '\EB6A';
+ }
+ 
+ .kw-Icon--BingLogo::before {
+     content: '\EB6B';
+ }
+ 
+ .kw-Icon--MSNLogo::before {
+     content: '\EB6C';
+ }
+ 
+ .kw-Icon--OutlookLogo::before {
+     content: '\EB6D';
+ }
+ 
+ .kw-Icon--OfficeLogo::before {
+     content: '\EB6E';
+ }
+ 
+ .kw-Icon--SkypeLogo::before {
+     content: '\EB6F';
+ }
+ 
+ .kw-Icon--Door::before {
+     content: '\EB75';
+ }
+ 
+ .kw-Icon--EditMirrored::before {
+     content: '\EB7E';
+ }
+ 
+ .kw-Icon--GiftCard::before {
+     content: '\EB8E';
+ }
+ 
+ .kw-Icon--DoubleBookmark::before {
+     content: '\EB8F';
+ }
+ 
+ .kw-Icon--StatusErrorFull::before {
+     content: '\EB90';
+ }
+ 
+ .kw-Icon--Certificate::before {
+     content: '\EB95';
+ }
+ 
+ .kw-Icon--Photo2::before {
+     content: '\EB9F';
+ }
+ 
+ .kw-Icon--CloudDownload::before {
+     content: '\EBD3';
+ }
+ 
+ .kw-Icon--WindDirection::before {
+     content: '\EBE6';
+ }
+ 
+ .kw-Icon--Family::before {
+     content: '\EBDA';
+ }
+ 
+ .kw-Icon--CSS::before {
+     content: '\EBEF';
+ }
+ 
+ .kw-Icon--JS::before {
+     content: '\EBF0';
+ }
+ 
+ .kw-Icon--ReminderGroup::before {
+     content: '\EBF8';
+ }
+ 
+ .kw-Icon--Section::before {
+     content: '\EC0C';
+ }
+ 
+ .kw-Icon--OneNoteLogo::before {
+     content: '\EC0D';
+ }
+ 
+ .kw-Icon--ToggleFilled::before {
+     content: '\EC11';
+ }
+ 
+ .kw-Icon--ToggleBorder::before {
+     content: '\EC12';
+ }
+ 
+ .kw-Icon--Slider:before {
+     content: '\F527';
+ }
+ 
+ .kw-Icon--SliderThumb:before {
+     content: '\EC13';
+ }
+ 
+ .kw-Icon--ToggleThumb::before {
+     content: '\EC14';
+ }
+ 
+ .kw-Icon--Documentation::before {
+     content: '\EC17';
+ }
+ 
+ .kw-Icon--Badge::before {
+     content: '\EC1B';
+ }
+ 
+ .kw-Icon--Giftbox::before {
+     content: '\EC1F';
+ }
+ 
+ .kw-Icon--ExcelLogo::before {
+     content: '\EC28';
+ }
+ 
+ .kw-Icon--WordLogo::before {
+     content: '\EC29';
+ }
+ 
+ .kw-Icon--PowerPointLogo::before {
+     content: '\EC2A';
+ }
+ 
+ .kw-Icon--Cafe::before {
+     content: '\EC32';
+ }
+ 
+ .kw-Icon--SpeedHigh::before {
+     content: '\EC4A';
+ }
+ 
+ .kw-Icon--MusicNote::before {
+     content: '\EC4F';
+ }
+ 
+ .kw-Icon--EdgeLogo::before {
+     content: '\EC60';
+ }
+ 
+ .kw-Icon--CompletedSolid::before {
+     content: '\EC61';
+ }
+ 
+ .kw-Icon--AlbumRemove::before {
+     content: '\EC62';
+ }
+ 
+ .kw-Icon--MessageFill::before {
+     content: '\EC70';
+ }
+ 
+ .kw-Icon--TabletSelected::before {
+     content: '\EC74';
+ }
+ 
+ .kw-Icon--MobileSelected::before {
+     content: '\EC75';
+ }
+ 
+ .kw-Icon--LaptopSelected::before {
+     content: '\EC76';
+ }
+ 
+ .kw-Icon--TVMonitorSelected::before {
+     content: '\EC77';
+ }
+ 
+ .kw-Icon--DeveloperTools::before {
+     content: '\EC7A';
+ }
+ 
+ .kw-Icon--InsertTextBox::before {
+     content: '\EC7D';
+ }
+ 
+ .kw-Icon--LowerBrightness::before {
+     content: '\EC8A';
+ }
+ 
+ .kw-Icon--CloudUpload::before {
+     content: '\EC8E';
+ }
+ 
+ .kw-Icon--DateTime::before {
+     content: '\EC92';
+ }
+ 
+ .kw-Icon--Event::before {
+     content: '\ECA3';
+ }
+ 
+ .kw-Icon--Cake::before {
+     content: '\ECA4';
+ }
+ 
+ .kw-Icon--Tiles::before {
+     content: '\ECA5';
+ }
+ 
+ .kw-Icon--Org::before {
+     content: '\ECA6';
+ }
+ 
+ .kw-Icon--PartyLeader::before {
+     content: '\ECA7';
+ }
+ 
+ .kw-Icon--DRM::before {
+     content: '\ECA8';
+ }
+ 
+ .kw-Icon--CloudAdd::before {
+     content: '\ECA9';
+ }
+ 
+ .kw-Icon--AppIconDefault::before {
+     content: '\ECAA';
+ }
+ 
+ .kw-Icon--Photo2Add::before {
+     content: '\ECAB';
+ }
+ 
+ .kw-Icon--Photo2Remove::before {
+     content: '\ECAC';
+ }
+ 
+ .kw-Icon--POI::before {
+     content: '\ECAF';
+ }
+ 
+ .kw-Icon--FacebookLogo::before {
+     content: '\ECB3';
+ }
+ 
+ .kw-Icon--AddTo::before {
+     content: '\ECC8';
+ }
+ 
+ .kw-Icon--RadioBtnOn::before {
+     content: '\ECCB';
+ }
+ 
+ .kw-Icon--Embed::before {
+     content: '\ECCE';
+ }
+ 
+ .kw-Icon--VideoSolid::before {
+     content: '\EA0C';
+ }
+ 
+ .kw-Icon--Teamwork::before {
+     content: '\EA12';
+ }
+ 
+ .kw-Icon--PeopleAdd::before {
+     content: '\EA15';
+ }
+ 
+ .kw-Icon--Glasses::before {
+     content: '\EA16';
+ }
+ 
+ .kw-Icon--DateTime2::before {
+     content: '\EA17';
+ }
+ 
+ .kw-Icon--Shield::before {
+     content: '\EA18';
+ }
+ 
+ .kw-Icon--Header1::before {
+     content: '\EA19';
+ }
+ 
+ .kw-Icon--PageAdd::before {
+     content: '\EA1A';
+ }
+ 
+ .kw-Icon--NumberedList::before {
+     content: '\EA1C';
+ }
+ 
+ .kw-Icon--PowerBILogo::before {
+     content: '\EA1E';
+ }
+ 
+ .kw-Icon--Product::before {
+     content: '\ECDC';
+ }
+ 
+ .kw-Icon--Blocked2::before {
+     content: '\ECE4';
+ }
+ 
+ .kw-Icon--FangBody::before {
+     content: '\ECEB';
+ }
+ 
+ .kw-Icon--Glimmer::before {
+     content: '\ECF4';
+ }
+ 
+ .kw-Icon--ChatInviteFriend::before {
+     content: '\ECFE';
+ }
+ 
+ .kw-Icon--SharepointLogo::before {
+     content: '\ED18';
+ }
+ 
+ .kw-Icon--YammerLogo::before {
+     content: '\ED19';
+ }
+ 
+ .kw-Icon--ReturnToSession::before {
+     content: '\ED24';
+ }
+ 
+ .kw-Icon--OpenFolderHorizontal::before {
+     content: '\ED25';
+ }
+ 
+ .kw-Icon--CalendarMirrored::before {
+     content: '\ED28';
+ }
+ 
+ .kw-Icon--SwayLogo::before {
+     content: '\ED29';
+ }
+ 
+ .kw-Icon--OutOfOffice::before {
+     content: '\ED34';
+ }
+ 
+ .kw-Icon--Trophy::before {
+     content: '\ED3F';
+ }
+ 
+ .kw-Icon--ReopenPages::before {
+     content: '\ED50';
+ }
+ 
+ .kw-Icon--AADLogo::before {
+     content: '\ED68';
+ }
+ 
+ .kw-Icon--AccessLogo::before {
+     content: '\ED69';
+ }
+ 
+ .kw-Icon--AdminALogo::before {
+     content: '\ED6A';
+ }
+ 
+ .kw-Icon--AdminCLogo::before {
+     content: '\ED6B';
+ }
+ 
+ .kw-Icon--AdminDLogo::before {
+     content: '\ED6C';
+ }
+ 
+ .kw-Icon--AdminELogo::before {
+     content: '\ED6D';
+ }
+ 
+ .kw-Icon--AdminLLogo::before {
+     content: '\ED6E';
+ }
+ 
+ .kw-Icon--AdminMLogo::before {
+     content: '\ED6F';
+ }
+ 
+ .kw-Icon--AdminOLogo::before {
+     content: '\ED70';
+ }
+ 
+ .kw-Icon--AdminPLogo::before {
+     content: '\ED71';
+ }
+ 
+ .kw-Icon--AdminSLogo::before {
+     content: '\ED72';
+ }
+ 
+ .kw-Icon--AdminYLogo::before {
+     content: '\ED73';
+ }
+ 
+ .kw-Icon--AlchemyLogo::before {
+     content: '\ED74';
+ }
+ 
+ .kw-Icon--BoxLogo::before {
+     content: '\ED75';
+ }
+ 
+ .kw-Icon--DelveLogo::before {
+     content: '\ED76';
+ }
+ 
+ .kw-Icon--DropboxLogo::before {
+     content: '\ED77';
+ }
+ 
+ .kw-Icon--ExchangeLogo::before {
+     content: '\ED78';
+ }
+ 
+ .kw-Icon--LyncLogo::before {
+     content: '\ED79';
+ }
+ 
+ .kw-Icon--OfficeVideoLogo::before {
+     content: '\ED7A';
+ }
+ 
+ .kw-Icon--ParatureLogo::before {
+     content: '\ED7B';
+ }
+ 
+ .kw-Icon--SocialListeningLogo::before {
+     content: '\ED7C';
+ }
+ 
+ .kw-Icon--VisioLogo::before {
+     content: '\ED7D';
+ }
+ 
+ .kw-Icon--Balloons::before {
+     content: '\ED7E';
+ }
+ 
+ .kw-Icon--Cat::before {
+     content: '\ED7F';
+ }
+ 
+ .kw-Icon--MailAlert::before {
+     content: '\ED80';
+ }
+ 
+ .kw-Icon--MailCheck::before {
+     content: '\ED81';
+ }
+ 
+ .kw-Icon--MailLowImportance::before {
+     content: '\ED82';
+ }
+ 
+ .kw-Icon--MailPause::before {
+     content: '\ED83';
+ }
+ 
+ .kw-Icon--MailRepeat::before {
+     content: '\ED84';
+ }
+ 
+ .kw-Icon--SecurityGroup::before {
+     content: '\ED85';
+ }
+ 
+ .kw-Icon--Table::before {
+     content: '\ED86';
+ }
+ 
+ .kw-Icon--VoicemailForward::before {
+     content: '\ED87';
+ }
+ 
+ .kw-Icon--VoicemailReply::before {
+     content: '\ED88';
+ }
+ 
+ .kw-Icon--Waffle::before {
+     content: '\ED89';
+ }
+ 
+ .kw-Icon--RemoveEvent::before {
+     content: '\ED8A';
+ }
+ 
+ .kw-Icon--EventInfo::before {
+     content: '\ED8B';
+ }
+ 
+ .kw-Icon--ForwardEvent::before {
+     content: '\ED8C';
+ }
+ 
+ .kw-Icon--WipePhone::before {
+     content: '\ED8D';
+ }
+ 
+ .kw-Icon--AddOnlineMeeting::before {
+     content: '\ED8E';
+ }
+ 
+ .kw-Icon--JoinOnlineMeeting::before {
+     content: '\ED8F';
+ }
+ 
+ .kw-Icon--RemoveLink::before {
+     content: '\ED90';
+ }
+ 
+ .kw-Icon--PeopleBlock::before {
+     content: '\ED91';
+ }
+ 
+ .kw-Icon--PeopleRepeat::before {
+     content: '\ED92';
+ }
+ 
+ .kw-Icon--PeopleAlert::before {
+     content: '\ED93';
+ }
+ 
+ .kw-Icon--PeoplePause::before {
+     content: '\ED94';
+ }
+ 
+ .kw-Icon--TransferCall::before {
+     content: '\ED95';
+ }
+ 
+ .kw-Icon--AddPhone::before {
+     content: '\ED96';
+ }
+ 
+ .kw-Icon--UnknownCall::before {
+     content: '\ED97';
+ }
+ 
+ .kw-Icon--NoteReply::before {
+     content: '\ED98';
+ }
+ 
+ .kw-Icon--NoteForward::before {
+     content: '\ED99';
+ }
+ 
+ .kw-Icon--NotePinned::before {
+     content: '\ED9A';
+ }
+ 
+ .kw-Icon--RemoveOccurrence::before {
+     content: '\ED9B';
+ }
+ 
+ .kw-Icon--Timeline::before {
+     content: '\ED9C';
+ }
+ 
+ .kw-Icon--EditNote::before {
+     content: '\ED9D';
+ }
+ 
+ .kw-Icon--CircleHalfFull::before {
+     content: '\ED9E';
+ }
+ 
+ .kw-Icon--Room::before {
+     content: '\ED9F';
+ }
+ 
+ .kw-Icon--Unsubscribe::before {
+     content: '\EDA0';
+ }
+ 
+ .kw-Icon--Subscribe::before {
+     content: '\EDA1';
+ }
+ 
+ .kw-Icon--RecurringTask::before {
+     content: '\EDB2';
+ }
+ 
+ .kw-Icon--TaskManager::before {
+     content: '\EDB7';
+ }
+ 
+ .kw-Icon--TaskManagerMirrored::before {
+     content: '\EDB8';
+ }
+ 
+ .kw-Icon--Combine::before {
+     content: '\EDBB';
+ }
+ 
+ .kw-Icon--Split::before {
+     content: '\EDBC';
+ }
+ 
+ .kw-Icon--DoubleChevronUp::before {
+     content: '\EDBD';
+ }
+ 
+ .kw-Icon--DoubleChevronLeft::before {
+     content: '\EDBE';
+ }
+ 
+ .kw-Icon--DoubleChevronRight::before {
+     content: '\EDBF';
+ }
+ 
+ .kw-Icon--Ascending::before {
+     content: '\EDC0';
+ }
+ 
+ .kw-Icon--Descending::before {
+     content: '\EDC1';
+ }
+ 
+ .kw-Icon--TextBox::before {
+     content: '\EDC2';
+ }
+ 
+ .kw-Icon--TextField::before {
+     content: '\EDC3';
+ }
+ 
+ .kw-Icon--NumberField::before {
+     content: '\EDC4';
+ }
+ 
+ .kw-Icon--Dropdown::before {
+     content: '\EDC5';
+ }
+ 
+ .kw-Icon--BookingsLogo::before {
+     content: '\EDC7';
+ }
+ 
+ .kw-Icon--ClassNotebookLogo::before {
+     content: '\EDC8';
+ }
+ 
+ .kw-Icon--CollabsDBLogo::before {
+     content: '\EDC9';
+ }
+ 
+ .kw-Icon--DelveAnalyticsLogo::before {
+     content: '\EDCA';
+ }
+ 
+ .kw-Icon--DocsLogo::before {
+     content: '\EDCB';
+ }
+ 
+ .kw-Icon--DynamicsCRMLogo::before,
+ .kw-Icon--Dynamics365Logo::before {
+     content: '\EDCC';
+ }
+ 
+ .kw-Icon--DynamicSMBLogo::before {
+     content: '\EDCD';
+ }
+ 
+ .kw-Icon--OfficeAssistantLogo::before {
+     content: '\EDCE';
+ }
+ 
+ .kw-Icon--OfficeStoreLogo::before {
+     content: '\EDCF';
+ }
+ 
+ .kw-Icon--OneNoteEduLogo::before {
+     content: '\EDD0';
+ }
+ 
+ .kw-Icon--Planner::before {
+     content: '\EDD1';
+ }
+ 
+ .kw-Icon--PowerApps::before {
+     content: '\EDD2';
+ }
+ 
+ .kw-Icon--Suitcase::before {
+     content: '\EDD3';
+ }
+ 
+ .kw-Icon--ProjectLogo::before {
+     content: '\EDD4';
+ }
+ 
+ .kw-Icon--CaretLeft8::before {
+     content: '\EDD5';
+ }
+ 
+ .kw-Icon--CaretRight8::before {
+     content: '\EDD6';
+ }
+ 
+ .kw-Icon--CaretUp8::before {
+     content: '\EDD7';
+ }
+ 
+ .kw-Icon--CaretDown8::before {
+     content: '\EDD8';
+ }
+ 
+ .kw-Icon--CaretLeftSolid8::before {
+     content: '\EDD9';
+ }
+ 
+ .kw-Icon--CarotRightSolid8::before,
+ .kw-Icon--CaretRightSolid8::before {
+     content: '\EDDA';
+ }
+ 
+ .kw-Icon--CaretUpSolid8::before {
+     content: '\EDDB';
+ }
+ 
+ .kw-Icon--CaretDownSolid8::before {
+     content: '\EDDC';
+ }
+ 
+ .kw-Icon--ClearFormatting::before {
+     content: '\EDDD';
+ }
+ 
+ .kw-Icon--Superscript::before {
+     content: '\EDDE';
+ }
+ 
+ .kw-Icon--Subscript::before {
+     content: '\EDDF';
+ }
+ 
+ .kw-Icon--Strikethrough::before {
+     content: '\EDE0';
+ }
+ 
+ .kw-Icon--SingleBookmark::before {
+     content: '\EDFF';
+ }
+ 
+ .kw-Icon--DoubleChevronDown::before {
+     content: '\EE04';
+ }
+ 
+ .kw-Icon--ReplyAll::before {
+     content: '\EE0A';
+ }
+ 
+ .kw-Icon--GoogleDriveLogo::before {
+     content: '\EE0B';
+ }
+ 
+ .kw-Icon--Questionnaire::before {
+     content: '\EE19';
+ }
+ 
+ .kw-Icon--ReplyMirrored::before {
+     content: '\EE35';
+ }
+ 
+ .kw-Icon--ReplyAllMirrored::before {
+     content: '\EE36';
+ }
+ 
+ .kw-Icon--AddGroup::before {
+     content: '\EE3D';
+ }
+ 
+ .kw-Icon--QuestionnaireMirrored::before {
+     content: '\EE4B';
+ }
+ 
+ .kw-Icon--TemporaryUser::before {
+     content: '\EE58';
+ }
+ 
+ .kw-Icon--GroupedDescending::before {
+     content: '\EE66';
+ }
+ 
+ .kw-Icon--GroupedAscending::before {
+     content: '\EE67';
+ }
+ 
+ .kw-Icon--SortUp::before {
+     content: '\EE68';
+ }
+ 
+ .kw-Icon--SortDown::before {
+     content: '\EE69';
+ }
+ 
+ .kw-Icon--AwayStatus::before {
+     content: '\EE6A';
+ }
+ 
+ .kw-Icon--SyncToPC::before {
+     content: '\EE6E';
+ }
+ 
+ .kw-Icon--AustralianRules::before {
+     content: '\EE70';
+ }
+ 
+ .kw-Icon--DateTimeMirrored::before {
+     content: '\EE93';
+ }
+ 
+ .kw-Icon--DoubleChevronUp12::before {
+     content: '\EE96';
+ }
+ 
+ .kw-Icon--DoubleChevronDown12::before {
+     content: '\EE97';
+ }
+ 
+ .kw-Icon--DoubleChevronLeft12::before {
+     content: '\EE98';
+ }
+ 
+ .kw-Icon--DoubleChevronRight12::before {
+     content: '\EE99';
+ }
+ 
+ .kw-Icon--CalendarAgenda::before {
+     content: '\EE9A';
+ }
+ 
+ .kw-Icon--AddEvent::before {
+     content: '\EEB5';
+ }
+ 
+ .kw-Icon--AssetLibrary::before {
+     content: '\EEB6';
+ }
+ 
+ .kw-Icon--DataConnectionLibrary::before {
+     content: '\EEB7';
+ }
+ 
+ .kw-Icon--DocLibrary::before {
+     content: '\EEB8';
+ }
+ 
+ .kw-Icon--FormLibrary::before {
+     content: '\EEB9';
+ }
+ 
+ .kw-Icon--FormLibraryMirrored::before {
+     content: '\EEBA';
+ }
+ 
+ .kw-Icon--ReportLibrary::before {
+     content: '\EEBB';
+ }
+ 
+ .kw-Icon--ReportLibraryMirrored::before {
+     content: '\EEBC';
+ }
+ 
+ .kw-Icon--ContactCard::before {
+     content: '\EEBD';
+ }
+ 
+ .kw-Icon--CustomList::before {
+     content: '\EEBE';
+ }
+ 
+ .kw-Icon--CustomListMirrored::before {
+     content: '\EEBF';
+ }
+ 
+ .kw-Icon--IssueTracking::before {
+     content: '\EEC0';
+ }
+ 
+ .kw-Icon--IssueTrackingMirrored::before {
+     content: '\EEC1';
+ }
+ 
+ .kw-Icon--PictureLibrary::before {
+     content: '\EEC2';
+ }
+ 
+ .kw-Icon--AppForOfficeLogo::before {
+     content: '\EEC7';
+ }
+ 
+ .kw-Icon--OfflineOneDriveParachute::before {
+     content: '\EEC8';
+ }
+ 
+ .kw-Icon--OfflineOneDriveParachuteDisabled::before {
+     content: '\EEC9';
+ }
+ 
+ .kw-Icon--LargeGrid::before {
+     content: '\EECB';
+ }
+ 
+ .kw-Icon--TriangleSolidUp12::before {
+     content: '\EECC';
+ }
+ 
+ .kw-Icon--TriangleSolidDown12::before {
+     content: '\EECD';
+ }
+ 
+ .kw-Icon--TriangleSolidLeft12::before {
+     content: '\EECE';
+ }
+ 
+ .kw-Icon--TriangleSolidRight12::before {
+     content: '\EECF';
+ }
+ 
+ .kw-Icon--TriangleUp12::before {
+     content: '\EED0';
+ }
+ 
+ .kw-Icon--TriangleDown12::before {
+     content: '\EED1';
+ }
+ 
+ .kw-Icon--TriangleLeft12::before {
+     content: '\EED2';
+ }
+ 
+ .kw-Icon--TriangleRight12::before {
+     content: '\EED3';
+ }
+ 
+ .kw-Icon--ArrowUpRight8::before {
+     content: '\EED4';
+ }
+ 
+ .kw-Icon--ArrowDownRight8::before {
+     content: '\EED5';
+ }
+ 
+ .kw-Icon--DocumentSet::before {
+     content: '\EED6';
+ }
+ 
+ .kw-Icon--DelveAnalytics::before {
+     content: '\EEEE';
+ }
+ 
+ .kw-Icon--ArrowUpRightMirrored8::before {
+     content: '\EEEF';
+ }
+ 
+ .kw-Icon--ArrowDownRightMirrored8::before {
+     content: '\EEF0';
+ }
+ 
+ .kw-Icon--OneDriveAdd::before {
+     content: '\EF32';
+ }
+ 
+ .kw-Icon--Header2::before {
+     content: '\EF36';
+ }
+ 
+ .kw-Icon--Header3::before {
+     content: '\EF37';
+ }
+ 
+ .kw-Icon--Header4::before {
+     content: '\EF38';
+ }
+ 
+ .kw-Icon--MarketDown::before {
+     content: '\EF42';
+ }
+ 
+ .kw-Icon--CalendarWorkWeek::before {
+     content: '\EF51';
+ }
+ 
+ .kw-Icon--SidePanel::before {
+     content: '\EF52';
+ }
+ 
+ .kw-Icon--GlobeFavorite::before {
+     content: '\EF53';
+ }
+ 
+ .kw-Icon--CaretTopLeftSolid8::before {
+     content: '\EF54';
+ }
+ 
+ .kw-Icon--CaretTopRightSolid8::before {
+     content: '\EF55';
+ }
+ 
+ .kw-Icon--ViewAll2::before {
+     content: '\EF56';
+ }
+ 
+ .kw-Icon--DocumentReply::before {
+     content: '\EF57';
+ }
+ 
+ .kw-Icon--PlayerSettings::before {
+     content: '\EF58';
+ }
+ 
+ .kw-Icon--ReceiptForward::before {
+     content: '\EF59';
+ }
+ 
+ .kw-Icon--ReceiptReply::before {
+     content: '\EF5A';
+ }
+ 
+ .kw-Icon--ReceiptCheck::before {
+     content: '\EF5B';
+ }
+ 
+ .kw-Icon--Fax::before {
+     content: '\EF5C';
+ }
+ 
+ .kw-Icon--RecurringEvent::before {
+     content: '\EF5D';
+ }
+ 
+ .kw-Icon--ReplyAlt::before {
+     content: '\EF5E';
+ }
+ 
+ .kw-Icon--ReplyAllAlt::before {
+     content: '\EF5F';
+ }
+ 
+ .kw-Icon--EditStyle::before {
+     content: '\EF60';
+ }
+ 
+ .kw-Icon--EditMail::before {
+     content: '\EF61';
+ }
+ 
+ .kw-Icon--Lifesaver::before {
+     content: '\EF62';
+ }
+ 
+ .kw-Icon--LifesaverLock::before {
+     content: '\EF63';
+ }
+ 
+ .kw-Icon--InboxCheck::before {
+     content: '\EF64';
+ }
+ 
+ .kw-Icon--FolderSearch::before {
+     content: '\EF65';
+ }
+ 
+ .kw-Icon--CollapseMenu::before {
+     content: '\EF66';
+ }
+ 
+ .kw-Icon--ExpandMenu::before {
+     content: '\EF67';
+ }
+ 
+ .kw-Icon--Boards::before {
+     content: '\EF68';
+ }
+ 
+ .kw-Icon--SunAdd::before {
+     content: '\EF69';
+ }
+ 
+ .kw-Icon--SunQuestionMark::before {
+     content: '\EF6A';
+ }
+ 
+ .kw-Icon--LandscapeOrientation::before {
+     content: '\EF6B';
+ }
+ 
+ .kw-Icon--DocumentSearch::before {
+     content: '\EF6C';
+ }
+ 
+ .kw-Icon--PublicCalendar::before {
+     content: '\EF6D';
+ }
+ 
+ .kw-Icon--PublicContactCard::before {
+     content: '\EF6E';
+ }
+ 
+ .kw-Icon--PublicEmail::before {
+     content: '\EF6F';
+ }
+ 
+ .kw-Icon--PublicFolder::before {
+     content: '\EF70';
+ }
+ 
+ .kw-Icon--WordDocument::before {
+     content: '\EF71';
+ }
+ 
+ .kw-Icon--PowerPointDocument::before {
+     content: '\EF72';
+ }
+ 
+ .kw-Icon--ExcelDocument::before {
+     content: '\EF73';
+ }
+ 
+ .kw-Icon--GroupedList::before {
+     content: '\EF74';
+ }
+ 
+ .kw-Icon--ClassroomLogo::before {
+     content: '\EF75';
+ }
+ 
+ .kw-Icon--Sections::before {
+     content: '\EF76';
+ }
+ 
+ .kw-Icon--EditPhoto::before {
+     content: '\EF77';
+ }
+ 
+ .kw-Icon--Starburst::before {
+     content: '\EF78';
+ }
+ 
+ .kw-Icon--ShareiOS::before {
+     content: '\EF79';
+ }
+ 
+ .kw-Icon--AirTickets::before {
+     content: '\EF7A';
+ }
+ 
+ .kw-Icon--PencilReply::before {
+     content: '\EF7B';
+ }
+ 
+ .kw-Icon--Tiles2::before {
+     content: '\EF7C';
+ }
+ 
+ .kw-Icon--SkypeCircleCheck::before {
+     content: '\EF7D';
+ }
+ 
+ .kw-Icon--SkypeCircleClock::before {
+     content: '\EF7E';
+ }
+ 
+ .kw-Icon--SkypeCircleMinus::before {
+     content: '\EF7F';
+ }
+ 
+ .kw-Icon--SkypeCheck::before {
+     content: '\EF80';
+ }
+ 
+ .kw-Icon--SkypeClock::before {
+     content: '\EF81';
+ }
+ 
+ .kw-Icon--SkypeMinus::before {
+     content: '\EF82';
+ }
+ 
+ .kw-Icon--SkypeMessage::before {
+     content: '\EF83';
+ }
+ 
+ .kw-Icon--ClosedCaption::before {
+     content: '\EF84';
+ }
+ 
+ .kw-Icon--ATPLogo::before {
+     content: '\EF85';
+ }
+ 
+ .kw-Icon--OfficeFormLogo::before {
+     content: '\EF86';
+ }
+ 
+ .kw-Icon--RecycleBin::before {
+     content: '\EF87';
+ }
+ 
+ .kw-Icon--EmptyRecycleBin::before {
+     content: '\EF88';
+ }
+ 
+ .kw-Icon--Hide2::before {
+     content: '\EF89';
+ }
+ 
+ .kw-Icon--iOSAppStoreLogo::before {
+     content: '\EF8A';
+ }
+ 
+ .kw-Icon--AndroidLogo::before {
+     content: '\EF8B';
+ }
+ 
+ .kw-Icon--Breadcrumb::before {
+     content: '\EF8C';
+ }
+ 
+ .kw-Icon--ClearFilter::before {
+     content: '\EF8F';
+ }
+ 
+ .kw-Icon--Flow::before {
+     content: '\EF90';
+ }
+ 
+ .kw-Icon--PageCheckedOut::before {
+     content: '\F02C';
+ }
+ 
+ .kw-Icon--SetAction::before {
+     content: '\F071';
+ }
+ 
+ .kw-Icon--PowerAppsLogo::before {
+     content: '\F091';
+ }
+ 
+ .kw-Icon--PowerApps2Logo::before {
+     content: '\F092';
+ }
+ 
+ .kw-Icon--FabricAssetLibrary::before {
+     content: '\F09C';
+ }
+ 
+ .kw-Icon--FabricDataConnectionLibrary::before {
+     content: '\F09D';
+ }
+ 
+ .kw-Icon--FabricDocLibrary::before {
+     content: '\F09E';
+ }
+ 
+ .kw-Icon--FabricFormLibrary::before {
+     content: '\F09F';
+ }
+ 
+ .kw-Icon--FabricFormLibraryMirrored::before {
+     content: '\F0A0';
+ }
+ 
+ .kw-Icon--FabricReportLibrary::before {
+     content: '\F0A1';
+ }
+ 
+ .kw-Icon--FabricReportLibraryMirrored::before {
+     content: '\F0A2';
+ }
+ 
+ .kw-Icon--FabricPublicFolder::before {
+     content: '\F0A3';
+ }
+ 
+ .kw-Icon--FabricFolderSearch::before {
+     content: '\F0A4';
+ }
+ 
+ .kw-Icon--FabricMovetoFolder::before {
+     content: '\F0A5';
+ }
+ 
+ .kw-Icon--FabricUnsyncFolder::before {
+     content: '\F0A6';
+ }
+ 
+ .kw-Icon--FabricSyncFolder::before {
+     content: '\F0A7';
+ }
+ 
+ .kw-Icon--FabricOpenFolderHorizontal::before {
+     content: '\F0A8';
+ }
+ 
+ .kw-Icon--FabricFolder::before {
+     content: '\F0A9';
+ }
+ 
+ .kw-Icon--FabricFolderFill::before {
+     content: '\F0AA';
+ }
+ 
+ .kw-Icon--FabricNewFolder::before {
+     content: '\F0AB';
+ }
+ 
+ .kw-Icon--FabricPictureLibrary::before {
+     content: '\F0AC';
+ }
+ 
+ .kw-Icon--AddFavorite::before {
+     content: '\F0C8';
+ }
+ 
+ .kw-Icon--AddFavoriteFill::before {
+     content: '\F0C9';
+ }
+ 
+ .kw-Icon--BufferTimeBefore::before {
+     content: '\F0CF';
+ }
+ 
+ .kw-Icon--BufferTimeAfter::before {
+     content: '\F0D0';
+ }
+ 
+ .kw-Icon--BufferTimeBoth::before {
+     content: '\F0D1';
+ }
+ 
+ .kw-Icon--PageCheckedin::before {
+     content: '\F104';
+ }
+ 
+ .kw-Icon--CaretBottomLeftSolid8::before {
+     content: '\F121';
+ }
+ 
+ .kw-Icon--CaretBottomRightSolid8::before {
+     content: '\F122';
+ }
+ 
+ /* KWizCom: Add missing icons from https://github.com/OfficeDev/office-ui-fabric-core/blob/master/src/data/icons.json */
+ .kw-Icon--BrowserTab::before {
+     content: '\F5D7';
+ }
+ .kw-Icon--Stack::before {
+     content: '\F26F';
+ }
+ .kw-Icon--PictureTile::before {
+     content: '\F526';
+ }
+ .kw-Icon--HardDriveGroup::before {
+     content: '\F18F';
+ }
+ .kw-Icon--CodeEdit::before {
+     content: '\F544';
+ }
+ .kw-Icon--MinimumValue::before {
+     content: '\F5BD';
+ }
+ .kw-Icon--MiniExpand::before {
+     content: '\E93A';
+ }
+ /* end adding icons */
+ 
+ .kw-BrandIcon--access.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_16x1.png);
+ }
+ 
+ .kw-BrandIcon--access.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_48x1.png);
+ }
+ 
+ .kw-BrandIcon--access.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_96x1.png);
+ }
+ 
+ .kw-BrandIcon--excel.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_16x1.png);
+ }
+ 
+ .kw-BrandIcon--excel.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_48x1.png);
+ }
+ 
+ .kw-BrandIcon--excel.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_96x1.png);
+ }
+ 
+ .kw-BrandIcon--infopath.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_16x1.png);
+ }
+ 
+ .kw-BrandIcon--infopath.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_48x1.png);
+ }
+ 
+ .kw-BrandIcon--infopath.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_96x1.png);
+ }
+ 
+ .kw-BrandIcon--office.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_16x1.png);
+ }
+ 
+ .kw-BrandIcon--office.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_48x1.png);
+ }
+ 
+ .kw-BrandIcon--office.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_96x1.png);
+ }
+ 
+ .kw-BrandIcon--onedrive.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_16x1.png);
+ }
+ 
+ .kw-BrandIcon--onedrive.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_48x1.png);
+ }
+ 
+ .kw-BrandIcon--onedrive.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_96x1.png);
+ }
+ 
+ .kw-BrandIcon--onenote.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_16x1.png);
+ }
+ 
+ .kw-BrandIcon--onenote.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_48x1.png);
+ }
+ 
+ .kw-BrandIcon--onenote.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_96x1.png);
+ }
+ 
+ .kw-BrandIcon--outlook.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_16x1.png);
+ }
+ 
+ .kw-BrandIcon--outlook.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_48x1.png);
+ }
+ 
+ .kw-BrandIcon--outlook.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_96x1.png);
+ }
+ 
+ .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_16x1.png);
+ }
+ 
+ .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_48x1.png);
+ }
+ 
+ .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_96x1.png);
+ }
+ 
+ .kw-BrandIcon--project.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_16x1.png);
+ }
+ 
+ .kw-BrandIcon--project.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_48x1.png);
+ }
+ 
+ .kw-BrandIcon--project.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_96x1.png);
+ }
+ 
+ .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_16x1.png);
+ }
+ 
+ .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_48x1.png);
+ }
+ 
+ .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_96x1.png);
+ }
+ 
+ .kw-BrandIcon--visio.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_16x1.png);
+ }
+ 
+ .kw-BrandIcon--visio.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_48x1.png);
+ }
+ 
+ .kw-BrandIcon--visio.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_96x1.png);
+ }
+ 
+ .kw-BrandIcon--word.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_16x1.png);
+ }
+ 
+ .kw-BrandIcon--word.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_48x1.png);
+ }
+ 
+ .kw-BrandIcon--word.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_96x1.png);
+ }
+ 
+ .kw-BrandIcon--accdb.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_16x1.png);
+ }
+ 
+ .kw-BrandIcon--accdb.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_48x1.png);
+ }
+ 
+ .kw-BrandIcon--accdb.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_96x1.png);
+ }
+ 
+ .kw-BrandIcon--csv.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_16x1.png);
+ }
+ 
+ .kw-BrandIcon--csv.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_48x1.png);
+ }
+ 
+ .kw-BrandIcon--csv.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_96x1.png);
+ }
+ 
+ .kw-BrandIcon--docx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--docx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--docx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--dotx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--dotx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--dotx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--mpp.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_16x1.png);
+ }
+ 
+ .kw-BrandIcon--mpp.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_48x1.png);
+ }
+ 
+ .kw-BrandIcon--mpp.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_96x1.png);
+ }
+ 
+ .kw-BrandIcon--mpt.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_16x1.png);
+ }
+ 
+ .kw-BrandIcon--mpt.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_48x1.png);
+ }
+ 
+ .kw-BrandIcon--mpt.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_96x1.png);
+ }
+ 
+ .kw-BrandIcon--odp.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_16x1.png);
+ }
+ 
+ .kw-BrandIcon--odp.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_48x1.png);
+ }
+ 
+ .kw-BrandIcon--odp.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_96x1.png);
+ }
+ 
+ .kw-BrandIcon--ods.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_16x1.png);
+ }
+ 
+ .kw-BrandIcon--ods.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_48x1.png);
+ }
+ 
+ .kw-BrandIcon--ods.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_96x1.png);
+ }
+ 
+ .kw-BrandIcon--odt.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_16x1.png);
+ }
+ 
+ .kw-BrandIcon--odt.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_48x1.png);
+ }
+ 
+ .kw-BrandIcon--odt.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_96x1.png);
+ }
+ 
+ .kw-BrandIcon--one.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_16x1.png);
+ }
+ 
+ .kw-BrandIcon--one.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_48x1.png);
+ }
+ 
+ .kw-BrandIcon--one.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_96x1.png);
+ }
+ 
+ .kw-BrandIcon--onepkg.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_16x1.png);
+ }
+ 
+ .kw-BrandIcon--onepkg.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_48x1.png);
+ }
+ 
+ .kw-BrandIcon--onepkg.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_96x1.png);
+ }
+ 
+ .kw-BrandIcon--onetoc.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_16x1.png);
+ }
+ 
+ .kw-BrandIcon--onetoc.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_48x1.png);
+ }
+ 
+ .kw-BrandIcon--onetoc.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_96x1.png);
+ }
+ 
+ .kw-BrandIcon--potx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--potx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--potx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--ppsx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--ppsx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--ppsx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--pptx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--pptx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--pptx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--pub.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_16x1.png);
+ }
+ 
+ .kw-BrandIcon--pub.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_48x1.png);
+ }
+ 
+ .kw-BrandIcon--pub.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_96x1.png);
+ }
+ 
+ .kw-BrandIcon--vsdx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--vsdx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--vsdx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--vssx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--vssx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--vssx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--vstx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--vstx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--vstx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--xls.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_16x1.png);
+ }
+ 
+ .kw-BrandIcon--xls.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_48x1.png);
+ }
+ 
+ .kw-BrandIcon--xls.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_96x1.png);
+ }
+ 
+ .kw-BrandIcon--xlsx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--xlsx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--xlsx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--xltx.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_16x1.png);
+ }
+ 
+ .kw-BrandIcon--xltx.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_48x1.png);
+ }
+ 
+ .kw-BrandIcon--xltx.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_96x1.png);
+ }
+ 
+ .kw-BrandIcon--xsn.kw-BrandIcon--Icon16 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_16x1.png);
+ }
+ 
+ .kw-BrandIcon--xsn.kw-BrandIcon--Icon48 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_48x1.png);
+ }
+ 
+ .kw-BrandIcon--xsn.kw-BrandIcon--Icon96 {
+     background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_96x1.png);
+ }
+ 
+ .kw-BrandIcon--Icon16 {
+     background-size: 100% 100%;
+     width: 16px;
+     height: 16px;
+ }
+ 
+ .kw-BrandIcon--Icon48 {
+     background-size: 100% 100%;
+     width: 48px;
+     height: 48px;
+ }
+ 
+ .kw-BrandIcon--Icon96 {
+     background-size: 100% 100%;
+     width: 96px;
+     height: 96px;
+ }
+ 
+ @media only screen and (-webkit-min-device-pixel-ratio: 1.5), only screen and (min-resolution: 144dpi) {
+     .kw-BrandIcon--access.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--access.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--access.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_96x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_16x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_48x1_5.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_96x1_5.png);
+     }
+ }
+ 
+ @media only screen and (-webkit-min-device-pixel-ratio: 2), only screen and (min-resolution: 192dpi) {
+     .kw-BrandIcon--access.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_16x2.png);
+     }
+ 
+     .kw-BrandIcon--access.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_48x2.png);
+     }
+ 
+     .kw-BrandIcon--access.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_96x2.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_16x2.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_48x2.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_96x2.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_16x2.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_48x2.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_96x2.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_16x2.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_48x2.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_96x2.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_16x2.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_48x2.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_96x2.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_16x2.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_48x2.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_96x2.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_16x2.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_48x2.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_96x2.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_16x2.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_48x2.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_96x2.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_16x2.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_48x2.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_96x2.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_16x2.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_48x2.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_96x2.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_16x2.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_48x2.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_96x2.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_16x2.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_48x2.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_96x2.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_16x2.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_48x2.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_96x2.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_16x2.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_48x2.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_96x2.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_16x2.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_48x2.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_96x2.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_16x2.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_48x2.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_96x2.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_16x2.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_48x2.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_96x2.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_16x2.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_48x2.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_96x2.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_16x2.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_48x2.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_96x2.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_16x2.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_48x2.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_96x2.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_16x2.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_48x2.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_96x2.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_16x2.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_48x2.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_96x2.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_16x2.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_48x2.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_96x2.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_16x2.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_48x2.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_96x2.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_16x2.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_48x2.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_96x2.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_16x2.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_48x2.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_96x2.png);
+     }
+ }
+ 
+ @media only screen and (-webkit-min-device-pixel-ratio: 3), only screen and (min-resolution: 288dpi) {
+     .kw-BrandIcon--access.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_16x3.png);
+     }
+ 
+     .kw-BrandIcon--access.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_48x3.png);
+     }
+ 
+     .kw-BrandIcon--access.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/access_96x3.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_16x3.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_48x3.png);
+     }
+ 
+     .kw-BrandIcon--excel.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/excel_96x3.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_16x3.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_48x3.png);
+     }
+ 
+     .kw-BrandIcon--infopath.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/infopath_96x3.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_16x3.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_48x3.png);
+     }
+ 
+     .kw-BrandIcon--office.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/office_96x3.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_16x3.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_48x3.png);
+     }
+ 
+     .kw-BrandIcon--onedrive.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onedrive_96x3.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_16x3.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_48x3.png);
+     }
+ 
+     .kw-BrandIcon--onenote.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/onenote_96x3.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_16x3.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_48x3.png);
+     }
+ 
+     .kw-BrandIcon--outlook.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/outlook_96x3.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_16x3.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_48x3.png);
+     }
+ 
+     .kw-BrandIcon--powerpoint.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/powerpoint_96x3.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_16x3.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_48x3.png);
+     }
+ 
+     .kw-BrandIcon--project.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/project_96x3.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_16x3.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_48x3.png);
+     }
+ 
+     .kw-BrandIcon--sharepoint.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/sharepoint_96x3.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_16x3.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_48x3.png);
+     }
+ 
+     .kw-BrandIcon--visio.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/visio_96x3.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_16x3.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_48x3.png);
+     }
+ 
+     .kw-BrandIcon--word.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/product/png/word_96x3.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_16x3.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_48x3.png);
+     }
+ 
+     .kw-BrandIcon--accdb.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/accdb_96x3.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_16x3.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_48x3.png);
+     }
+ 
+     .kw-BrandIcon--csv.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/csv_96x3.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--docx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/docx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--dotx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/dotx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_16x3.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_48x3.png);
+     }
+ 
+     .kw-BrandIcon--mpp.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpp_96x3.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_16x3.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_48x3.png);
+     }
+ 
+     .kw-BrandIcon--mpt.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/mpt_96x3.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_16x3.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_48x3.png);
+     }
+ 
+     .kw-BrandIcon--odp.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odp_96x3.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_16x3.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_48x3.png);
+     }
+ 
+     .kw-BrandIcon--ods.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ods_96x3.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_16x3.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_48x3.png);
+     }
+ 
+     .kw-BrandIcon--odt.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/odt_96x3.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_16x3.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_48x3.png);
+     }
+ 
+     .kw-BrandIcon--one.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/one_96x3.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_16x3.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_48x3.png);
+     }
+ 
+     .kw-BrandIcon--onepkg.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onepkg_96x3.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_16x3.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_48x3.png);
+     }
+ 
+     .kw-BrandIcon--onetoc.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/onetoc_96x3.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--potx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/potx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--ppsx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/ppsx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--pptx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pptx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_16x3.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_48x3.png);
+     }
+ 
+     .kw-BrandIcon--pub.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/pub_96x3.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--vsdx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vsdx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--vssx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vssx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--vstx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/vstx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_16x3.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_48x3.png);
+     }
+ 
+     .kw-BrandIcon--xls.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xls_96x3.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--xlsx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xlsx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_16x3.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_48x3.png);
+     }
+ 
+     .kw-BrandIcon--xltx.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xltx_96x3.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon16 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_16x3.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon48 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_48x3.png);
+     }
+ 
+     .kw-BrandIcon--xsn.kw-BrandIcon--Icon96 {
+         background-image: url(https://spoprod-a.akamaihd.net/files/fabric/assets/brand-icons/document/png/xsn_96x3.png);
+     }
+ }
+ 
+ .kw-u-slideRightIn10 {
+     animation-name: fadeIn, slideRightIn10;
+       -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideRightIn10 {
+     from {
+         transform: translate3d(-10px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideRightIn20 {
+     animation-name: fadeIn, slideRightIn20;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideRightIn20 {
+     from {
+         transform: translate3d(-20px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideRightIn40 {
+     animation-name: fadeIn, slideRightIn40;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideRightIn40 {
+     from {
+         transform: translate3d(-40px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideLeftIn10 {
+     animation-name: fadeIn, slideLeftIn10;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideLeftIn10 {
+     from {
+         transform: translate3d(10px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideLeftIn20 {
+     animation-name: fadeIn, slideLeftIn20;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideLeftIn20 {
+     from {
+         transform: translate3d(20px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideLeftIn40 {
+     animation-name: fadeIn, slideLeftIn40;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideLeftIn40 {
+     from {
+         transform: translate3d(40px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideRightIn400 {
+     animation-name: fadeIn, slideRightIn400;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideRightIn400 {
+     from {
+         transform: translate3d(-400px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideLeftIn400 {
+     animation-name: fadeIn, slideLeft400;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideLeft400 {
+     from {
+         transform: translate3d(400px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideUpIn20 {
+     animation-name: fadeIn, slideUpIn20;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideUpIn20 {
+     from {
+         transform: translate3d(0px, 20px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideUpIn10 {
+     animation-name: fadeIn, slideUpIn10;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideUpIn10 {
+     from {
+         transform: translate3d(0px, 10px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideDownIn20 {
+     animation-name: fadeIn, slideDownIn20;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideDownIn20 {
+     from {
+         transform: translate3d(0px, -20px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideDownIn10 {
+     animation-name: fadeIn, slideDownIn10;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideDownIn10 {
+     from {
+         transform: translate3d(0px, -10px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideRightOut40 {
+     animation-name: fadeOut, slideRightOut40;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideRightOut40 {
+     from {
+         transform: translate3d(0px, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(40px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideLeftOut40 {
+     animation-name: fadeOut, slideLeftOut40;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideLeftOut40 {
+     from {
+         transform: translate3d(0, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(-40px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideRightOut400 {
+     animation-name: fadeOut, slideRightOut400;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideRightOut400 {
+     from {
+         transform: translate3d(0, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(400px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideLeftOut400 {
+     animation-name: fadeOut, slideLeftOut400;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideLeftOut400 {
+     from {
+         transform: translate3d(0, 0px, 0px);
+     }
+ 
+     to {
+         transform: translate3d(-400px, 0px, 0px);
+     }
+ }
+ 
+ .kw-u-slideUpOut20 {
+     animation-name: fadeOut, slideUpOut20;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideUpOut20 {
+     from {
+         transform: translate3d(0px, 0, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, -20px, 0px);
+     }
+ }
+ 
+ .kw-u-slideUpOut10 {
+     animation-name: fadeOut, slideUpOut10;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideUpOut10 {
+     from {
+         transform: translate3d(0px, 0, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, -10px, 0px);
+     }
+ }
+ 
+ .kw-u-slideDownOut20 {
+     animation-name: fadeOut, slideDownOut20;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideDownOut20 {
+     from {
+         transform: translate3d(0px, 0, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 20px, 0px);
+     }
+ }
+ 
+ .kw-u-slideDownOut10 {
+     animation-name: fadeOut, slideDownOut10;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes slideDownOut10 {
+     from {
+         transform: translate3d(0px, 0, 0px);
+     }
+ 
+     to {
+         transform: translate3d(0px, 10px, 0px);
+     }
+ }
+ 
+ .kw-u-scaleUpIn100 {
+     animation-name: fadeIn, scaleUp100;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes scaleUp100 {
+     from {
+         transform: scale3d(0.98, 0.98, 1);
+     }
+ 
+     to {
+         transform: scale3d(1, 1, 1);
+     }
+ }
+ 
+ .kw-u-scaleDownIn100 {
+     animation-name: fadeIn, scaleDown100;
+     -webkit-animation-duration: 0.367s;
+     -moz-animation-duration: 0.367s;
+     -ms-animation-duration: 0.367s;
+     -o-animation-duration: 0.367s;
+     animation-timing-function: cubic-bezier(0.1, 0.9, 0.2, 1);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes scaleDown100 {
+     from {
+         transform: scale3d(1.03, 1.03, 1);
+     }
+ 
+     to {
+         transform: scale3d(1, 1, 1);
+     }
+ }
+ 
+ .kw-u-scaleUpOut103 {
+     animation-name: fadeOut, scaleUp103;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes scaleUp103 {
+     from {
+         transform: scale3d(1, 1, 1);
+     }
+ 
+     to {
+         transform: scale3d(1.03, 1.03, 1);
+     }
+ }
+ 
+ .kw-u-scaleDownOut98 {
+     animation-name: fadeOut, scaleDown98;
+     -webkit-animation-duration: 0.167s;
+     -moz-animation-duration: 0.167s;
+     -ms-animation-duration: 0.167s;
+     -o-animation-duration: 0.167s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes scaleDown98 {
+     from {
+         transform: scale3d(1, 1, 1);
+     }
+ 
+     to {
+         transform: scale3d(0.98, 0.98, 1);
+     }
+ }
+ 
+ .kw-u-fadeIn400 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeIn;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeIn;
+     animation-fill-mode: both;
+ }
+ 
+ .kw-u-fadeIn100 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeIn;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeIn;
+     animation-fill-mode: both;
+     animation-duration: 0.167s;
+ }
+ 
+ .kw-u-fadeIn200 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeIn;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeIn;
+     animation-fill-mode: both;
+     animation-duration: 0.267s;
+ }
+ 
+ .kw-u-fadeIn500 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeIn;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeIn;
+     animation-fill-mode: both;
+     animation-duration: 0.467s;
+ }
+ 
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+         animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     }
+ 
+     to {
+         opacity: 1;
+     }
+ }
+ 
+ .kw-u-fadeOut400 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeOut;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeOut;
+     animation-fill-mode: both;
+ }
+ 
+ .kw-u-fadeOut100 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeOut;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeOut;
+     animation-fill-mode: both;
+     animation-duration: 0.1s;
+ }
+ 
+ .kw-u-fadeOut200 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeOut;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeOut;
+     animation-fill-mode: both;
+     animation-duration: 0.167s;
+ }
+ 
+ .kw-u-fadeOut500 {
+     -webkit-animation-duration: 0.367s;
+     -webkit-animation-name: fadeOut;
+     -webkit-animation-fill-mode: both;
+     animation-duration: 0.367s;
+     animation-name: fadeOut;
+     animation-fill-mode: both;
+     animation-duration: 0.467s;
+ }
+ 
+ @keyframes fadeOut {
+     from {
+         opacity: 1;
+         animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     }
+ 
+     to {
+         opacity: 0;
+     }
+ }
+ 
+ .kw-u-rotate90deg {
+     animation-name: rotate90;
+     -webkit-animation-duration: 0.1s;
+     -moz-animation-duration: 0.1s;
+     -ms-animation-duration: 0.1s;
+     -o-animation-duration: 0.1s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes rotate90 {
+     from {
+         transform: rotateZ(0deg);
+     }
+ 
+     to {
+         transform: rotateZ(90deg);
+     }
+ }
+ 
+ .kw-u-rotateN90deg {
+     animation-name: rotateN90;
+     -webkit-animation-duration: 0.1s;
+     -moz-animation-duration: 0.1s;
+     -ms-animation-duration: 0.1s;
+     -o-animation-duration: 0.1s;
+     animation-timing-function: cubic-bezier(0.1, 0.25, 0.75, 0.9);
+     animation-fill-mode: both;
+ }
+ 
+ @keyframes rotateN90 {
+     from {
+         transform: rotateZ(90deg);
+     }
+ 
+     to {
+         transform: rotateZ(0deg);
+     }
+ }
+ 
+ .kw-u-expandCollapse400 {
+     transition: height 0.367s cubic-bezier(0.1, 0.25, 0.75, 0.9);
+ }
+ 
+ .kw-u-expandCollapse200 {
+     transition: height 0.167s cubic-bezier(0.1, 0.25, 0.75, 0.9);
+ }
+ 
+ .kw-u-expandCollapse100 {
+     transition: height 0.1s cubic-bezier(0.1, 0.25, 0.75, 0.9);
+ }
+ 
+ .kw-u-delay100 {
+     animation-delay: 0.167s;
+ }
+ 
+ .kw-u-delay200 {
+     animation-delay: 0.267s;
+ }
+ 
+ @media (max-width: 479px) {
+     .kw-u-hiddenSm,
+     .kw-u-hiddenMdDown,
+     .kw-u-hiddenLgDown,
+     .kw-u-hiddenXlDown,
+     .kw-u-hiddenXxlDown {
+         display: none !important;
+     }
+ }
+ 
+ @media (min-width: 480px) and (max-width: 639px) {
+     .kw-u-hiddenMd,
+     .kw-u-hiddenMdUp,
+     .kw-u-hiddenMdDown,
+     .kw-u-hiddenLgDown,
+     .kw-u-hiddenXlDown,
+     .kw-u-hiddenXxlDown {
+         display: none !important;
+     }
+ }
+ 
+ @media (min-width: 640px) and (max-width: 1023px) {
+     .kw-u-hiddenMdUp,
+     .kw-u-hiddenLg,
+     .kw-u-hiddenLgUp,
+     .kw-u-hiddenLgDown,
+     .kw-u-hiddenXlDown,
+     .kw-u-hiddenXxlDown {
+         display: none !important;
+     }
+ }
+ 
+ @media (min-width: 1024px) and (max-width: 1365px) {
+     .kw-u-hiddenMdUp,
+     .kw-u-hiddenLgUp,
+     .kw-u-hiddenXl,
+     .kw-u-hiddenXlUp,
+     .kw-u-hiddenXlDown,
+     .kw-u-hiddenXxlDown {
+         display: none !important;
+     }
+ }
+ 
+ @media (min-width: 1366px) and (max-width: 1919px) {
+     .kw-u-hiddenMdUp,
+     .kw-u-hiddenLgUp,
+     .kw-u-hiddenXlUp,
+     .kw-u-hiddenXxl,
+     .kw-u-hiddenXxlUp,
+     .kw-u-hiddenXxlDown {
+         display: none !important;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-hiddenMdUp,
+     .kw-u-hiddenLgUp,
+     .kw-u-hiddenXlUp,
+     .kw-u-hiddenXxlUp,
+     .kw-u-hiddenXxxl {
+         display: none !important;
+     }
+ }
+ 
+ .kw-u-sm12 {
+     width: 100%;
+ }
+ 
+ .kw-u-sm11 {
+     width: 91.66666666666666%;
+ }
+ 
+ .kw-u-sm10 {
+     width: 83.33333333333334%;
+ }
+ 
+ .kw-u-sm9 {
+     width: 75%;
+ }
+ 
+ .kw-u-sm8 {
+     width: 66.66666666666666%;
+ }
+ 
+ .kw-u-sm7 {
+     width: 58.333333333333336%;
+ }
+ 
+ .kw-u-sm6 {
+     width: 50%;
+ }
+ 
+ .kw-u-sm5 {
+     width: 41.66666666666667%;
+ }
+ 
+ .kw-u-sm4 {
+     width: 33.33333333333333%;
+ }
+ 
+ .kw-u-sm3 {
+     width: 25%;
+ }
+ 
+ .kw-u-sm2 {
+     width: 16.666666666666664%;
+ }
+ 
+ .kw-u-sm1 {
+     width: 8.333333333333332%;
+ }
+ 
+ .kw-u-smPull12 {
+     right: 100%;
+ }
+ 
+ .kw-u-smPull11 {
+     right: 91.66666666666666%;
+ }
+ 
+ .kw-u-smPull10 {
+     right: 83.33333333333334%;
+ }
+ 
+ .kw-u-smPull9 {
+     right: 75%;
+ }
+ 
+ .kw-u-smPull8 {
+     right: 66.66666666666666%;
+ }
+ 
+ .kw-u-smPull7 {
+     right: 58.333333333333336%;
+ }
+ 
+ .kw-u-smPull6 {
+     right: 50%;
+ }
+ 
+ .kw-u-smPull5 {
+     right: 41.66666666666667%;
+ }
+ 
+ .kw-u-smPull4 {
+     right: 33.33333333333333%;
+ }
+ 
+ .kw-u-smPull3 {
+     right: 25%;
+ }
+ 
+ .kw-u-smPull2 {
+     right: 16.666666666666664%;
+ }
+ 
+ .kw-u-smPull1 {
+     right: 8.333333333333332%;
+ }
+ 
+ .kw-u-smPull0 {
+     right: auto;
+ }
+ 
+ .kw-u-smPush12 {
+     left: 100%;
+ }
+ 
+ .kw-u-smPush11 {
+     left: 91.66666666666666%;
+ }
+ 
+ .kw-u-smPush10 {
+     left: 83.33333333333334%;
+ }
+ 
+ .kw-u-smPush9 {
+     left: 75%;
+ }
+ 
+ .kw-u-smPush8 {
+     left: 66.66666666666666%;
+ }
+ 
+ .kw-u-smPush7 {
+     left: 58.333333333333336%;
+ }
+ 
+ .kw-u-smPush6 {
+     left: 50%;
+ }
+ 
+ .kw-u-smPush5 {
+     left: 41.66666666666667%;
+ }
+ 
+ .kw-u-smPush4 {
+     left: 33.33333333333333%;
+ }
+ 
+ .kw-u-smPush3 {
+     left: 25%;
+ }
+ 
+ .kw-u-smPush2 {
+     left: 16.666666666666664%;
+ }
+ 
+ .kw-u-smPush1 {
+     left: 8.333333333333332%;
+ }
+ 
+ .kw-u-smPush0 {
+     left: auto;
+ }
+ 
+ .kw-u-smOffset11 {
+     margin-left: 91.66666666666666%;
+ }
+ 
+ .kw-u-smOffset10 {
+     margin-left: 83.33333333333334%;
+ }
+ 
+ .kw-u-smOffset9 {
+     margin-left: 75%;
+ }
+ 
+ .kw-u-smOffset8 {
+     margin-left: 66.66666666666666%;
+ }
+ 
+ .kw-u-smOffset7 {
+     margin-left: 58.333333333333336%;
+ }
+ 
+ .kw-u-smOffset6 {
+     margin-left: 50%;
+ }
+ 
+ .kw-u-smOffset5 {
+     margin-left: 41.66666666666667%;
+ }
+ 
+ .kw-u-smOffset4 {
+     margin-left: 33.33333333333333%;
+ }
+ 
+ .kw-u-smOffset3 {
+     margin-left: 25%;
+ }
+ 
+ .kw-u-smOffset2 {
+     margin-left: 16.666666666666664%;
+ }
+ 
+ .kw-u-smOffset1 {
+     margin-left: 8.333333333333332%;
+ }
+ 
+ .kw-u-smOffset0 {
+     margin-left: 0;
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md12 {
+         width: 100%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md11 {
+         width: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md10 {
+         width: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md9 {
+         width: 75%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md8 {
+         width: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md7 {
+         width: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md6 {
+         width: 50%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md5 {
+         width: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md4 {
+         width: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md3 {
+         width: 25%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md2 {
+         width: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-md1 {
+         width: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull12 {
+         right: 100%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull11 {
+         right: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull10 {
+         right: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull9 {
+         right: 75%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull8 {
+         right: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull7 {
+         right: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull6 {
+         right: 50%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull5 {
+         right: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull4 {
+         right: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull3 {
+         right: 25%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull2 {
+         right: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull1 {
+         right: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPull0 {
+         right: auto;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush12 {
+         left: 100%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush11 {
+         left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush10 {
+         left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush9 {
+         left: 75%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush8 {
+         left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush7 {
+         left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush6 {
+         left: 50%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush5 {
+         left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush4 {
+         left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush3 {
+         left: 25%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush2 {
+         left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush1 {
+         left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdPush0 {
+         left: auto;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset11 {
+         margin-left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset10 {
+         margin-left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset9 {
+         margin-left: 75%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset8 {
+         margin-left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset7 {
+         margin-left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset6 {
+         margin-left: 50%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset5 {
+         margin-left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset4 {
+         margin-left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset3 {
+         margin-left: 25%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset2 {
+         margin-left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset1 {
+         margin-left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 480px) {
+     .kw-u-mdOffset0 {
+         margin-left: 0;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg12 {
+         width: 100%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg11 {
+         width: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg10 {
+         width: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg9 {
+         width: 75%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg8 {
+         width: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg7 {
+         width: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg6 {
+         width: 50%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg5 {
+         width: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg4 {
+         width: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg3 {
+         width: 25%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg2 {
+         width: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lg1 {
+         width: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull12 {
+         right: 100%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull11 {
+         right: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull10 {
+         right: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull9 {
+         right: 75%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull8 {
+         right: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull7 {
+         right: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull6 {
+         right: 50%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull5 {
+         right: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull4 {
+         right: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull3 {
+         right: 25%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull2 {
+         right: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull1 {
+         right: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPull0 {
+         right: auto;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush12 {
+         left: 100%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush11 {
+         left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush10 {
+         left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush9 {
+         left: 75%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush8 {
+         left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush7 {
+         left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush6 {
+         left: 50%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush5 {
+         left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush4 {
+         left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush3 {
+         left: 25%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush2 {
+         left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush1 {
+         left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgPush0 {
+         left: auto;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset11 {
+         margin-left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset10 {
+         margin-left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset9 {
+         margin-left: 75%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset8 {
+         margin-left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset7 {
+         margin-left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset6 {
+         margin-left: 50%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset5 {
+         margin-left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset4 {
+         margin-left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset3 {
+         margin-left: 25%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset2 {
+         margin-left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset1 {
+         margin-left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 640px) {
+     .kw-u-lgOffset0 {
+         margin-left: 0;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl12 {
+         width: 100%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl11 {
+         width: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl10 {
+         width: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl9 {
+         width: 75%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl8 {
+         width: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl7 {
+         width: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl6 {
+         width: 50%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl5 {
+         width: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl4 {
+         width: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl3 {
+         width: 25%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl2 {
+         width: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xl1 {
+         width: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull12 {
+         right: 100%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull11 {
+         right: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull10 {
+         right: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull9 {
+         right: 75%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull8 {
+         right: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull7 {
+         right: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull6 {
+         right: 50%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull5 {
+         right: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull4 {
+         right: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull3 {
+         right: 25%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull2 {
+         right: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull1 {
+         right: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPull0 {
+         right: auto;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush12 {
+         left: 100%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush11 {
+         left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush10 {
+         left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush9 {
+         left: 75%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush8 {
+         left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush7 {
+         left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush6 {
+         left: 50%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush5 {
+         left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush4 {
+         left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush3 {
+         left: 25%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush2 {
+         left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush1 {
+         left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlPush0 {
+         left: auto;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset11 {
+         margin-left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset10 {
+         margin-left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset9 {
+         margin-left: 75%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset8 {
+         margin-left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset7 {
+         margin-left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset6 {
+         margin-left: 50%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset5 {
+         margin-left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset4 {
+         margin-left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset3 {
+         margin-left: 25%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset2 {
+         margin-left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset1 {
+         margin-left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1024px) {
+     .kw-u-xlOffset0 {
+         margin-left: 0;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl12 {
+         width: 100%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl11 {
+         width: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl10 {
+         width: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl9 {
+         width: 75%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl8 {
+         width: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl7 {
+         width: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl6 {
+         width: 50%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl5 {
+         width: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl4 {
+         width: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl3 {
+         width: 25%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl2 {
+         width: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxl1 {
+         width: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull12 {
+         right: 100%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull11 {
+         right: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull10 {
+         right: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull9 {
+         right: 75%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull8 {
+         right: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull7 {
+         right: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull6 {
+         right: 50%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull5 {
+         right: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull4 {
+         right: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull3 {
+         right: 25%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull2 {
+         right: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull1 {
+         right: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPull0 {
+         right: auto;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush12 {
+         left: 100%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush11 {
+         left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush10 {
+         left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush9 {
+         left: 75%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush8 {
+         left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush7 {
+         left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush6 {
+         left: 50%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush5 {
+         left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush4 {
+         left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush3 {
+         left: 25%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush2 {
+         left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush1 {
+         left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlPush0 {
+         left: auto;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset11 {
+         margin-left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset10 {
+         margin-left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset9 {
+         margin-left: 75%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset8 {
+         margin-left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset7 {
+         margin-left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset6 {
+         margin-left: 50%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset5 {
+         margin-left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset4 {
+         margin-left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset3 {
+         margin-left: 25%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset2 {
+         margin-left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset1 {
+         margin-left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1366px) {
+     .kw-u-xxlOffset0 {
+         margin-left: 0;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl12 {
+         width: 100%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl11 {
+         width: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl10 {
+         width: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl9 {
+         width: 75%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl8 {
+         width: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl7 {
+         width: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl6 {
+         width: 50%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl5 {
+         width: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl4 {
+         width: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl3 {
+         width: 25%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl2 {
+         width: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxl1 {
+         width: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull12 {
+         right: 100%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull11 {
+         right: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull10 {
+         right: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull9 {
+         right: 75%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull8 {
+         right: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull7 {
+         right: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull6 {
+         right: 50%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull5 {
+         right: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull4 {
+         right: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull3 {
+         right: 25%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull2 {
+         right: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull1 {
+         right: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPull0 {
+         right: auto;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush12 {
+         left: 100%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush11 {
+         left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush10 {
+         left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush9 {
+         left: 75%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush8 {
+         left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush7 {
+         left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush6 {
+         left: 50%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush5 {
+         left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush4 {
+         left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush3 {
+         left: 25%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush2 {
+         left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush1 {
+         left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlPush0 {
+         left: auto;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset11 {
+         margin-left: 91.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset10 {
+         margin-left: 83.33333333333334%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset9 {
+         margin-left: 75%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset8 {
+         margin-left: 66.66666666666666%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset7 {
+         margin-left: 58.333333333333336%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset6 {
+         margin-left: 50%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset5 {
+         margin-left: 41.66666666666667%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset4 {
+         margin-left: 33.33333333333333%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset3 {
+         margin-left: 25%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset2 {
+         margin-left: 16.666666666666664%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset1 {
+         margin-left: 8.333333333333332%;
+     }
+ }
+ 
+ @media (min-width: 1920px) {
+     .kw-u-xxxlOffset0 {
+         margin-left: 0;
+     }
+ }
+ 
+ .kw-Grid {
+     box-sizing: border-box;
+     *zoom: 1;
+     padding: 0 8px;
+ }
+ 
+     .kw-Grid::before,
+     .kw-Grid::after {
+         display: table;
+         content: '';
+         line-height: 0;
+     }
+ 
+     .kw-Grid::after {
+         clear: both;
+     }
+ 
+ .kw-Grid-row {
+     margin: 0 -8px;
+     box-sizing: border-box;
+     *zoom: 1;
+ }
+ 
+     .kw-Grid-row::before,
+     .kw-Grid-row::after {
+         display: table;
+         content: '';
+         line-height: 0;
+     }
+ 
+     .kw-Grid-row::after {
+         clear: both;
+     }
+ 
+ .kw-Grid-col {
+     position: relative;
+     min-height: 1px;
+     padding-left: 8px;
+     padding-right: 8px;
+     box-sizing: border-box;
+     float: left;
+ }
+ 
+     .kw-Grid-col .kw-Grid {
+         padding: 0;
+     }
+ 
+ .kw-Fabric {
+     color: #333333;
+ }

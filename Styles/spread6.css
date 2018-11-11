@@ -1,0 +1,323 @@
+/* .ui.grid.advanced-options__content > .row:not(:last-child) {
+    padding-bottom: 0;
+} */
+
+/* Change px to rem */
+body {
+    overflow: hidden;
+}
+
+
+.ui.divided.grid{
+    min-height: 11rem;
+    
+}
+
+#columns-container {
+    min-height: 9rem;
+    
+}
+#columns-place {
+    height: 15.8rem;
+    overflow-y: scroll;
+    
+}
+
+.ui.toggle.checkbox input:checked ~ .box:before,
+.ui.toggle.checkbox input:checked ~ label:before, 
+.ui.toggle.checkbox input:focus:checked ~ .box:before,
+.ui.toggle.checkbox input:focus:checked ~ label:before  {
+  background-color: #4CD964 !important;
+}
+
+.padding-small {
+padding-top: 0.2rem !important;
+padding-bottom: 0.2rem !important;
+}
+
+.padding-top-04 {
+    padding-top: 0.4rem !important;
+}
+
+.padding-bottom-06 {
+    padding-top: 0.6rem !important;
+}
+.padding-bottom-04 {
+    padding-top: 0.4rem !important;
+}
+.padding-bottom-02 {
+    padding-bottom: 0.2rem !important;
+}
+
+.margin-top-03 {
+    margin-top: 0.3rem !important;
+}
+
+.padding-left-05 {
+    padding-left: 0.5rem !important;
+}
+
+
+#data-input-window{
+    max-width: 95% !important;
+
+}
+
+.divided.grid.ui {
+    padding-bottom: 1rem;
+}
+
+/* #inputs-fields .dropdown .ui.label.transition.visible {
+    vertical-align: middle;
+} */
+
+/* #inputs-fields .dropdown .ui.label.transition.visible > i.delete, 
+#inputs-fields .dropdown .ui.label > i.delete {
+    font-size: 1.5rem;
+    position: absolute;
+    top: 0;
+    left: 6rem;
+}
+
+// Если строка большая - обрезается и не видно иконку с закрытием/ a position - relatrive, icon - absolure, Set width with width 
+#inputs-fields .dropdown .ui.label.transition.visible, 
+#inputs-fields .dropdown .ui.label,
+#columns-place .ui.checkbox > label  
+{
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        width: 8.5rem;
+        
+}
+
+#inputs-fields .dropdown a.ui.label.transition.visible, 
+#inputs-fields .dropdown a.ui.label {
+    position: relative;
+    padding-right: 1.5rem;
+}
+ */
+
+.ui.dimmer.modals.page.transition.visible.active{
+    overflow: hidden;
+    
+}
+
+
+div#main-options.ui.divided.grid {
+    max-height: 25.82rem;
+    
+}
+
+#inputs-fields {
+    max-height: 25.82rem;
+    
+}
+
+#inputs-fields .ui.input {
+    width: 100%;
+}
+
+@media only screen and (max-width: 770px)  {
+   #columns-container {
+       display: none;
+   }
+
+   #main-options.ui.grid > .row > [class*="twelve wide"].column,
+   .ui.grid > .column.row > [class*="twelve wide"].column,
+   .ui.grid > [class*="twelve wide"].column,
+   .ui.column.grid > [class*="twelve wide"].column {
+     width: 100% !important;
+   }
+    
+}
+
+/* TEST */
+
+#showSlide {
+    position: fixed;
+    top: 30rem;
+    left: 20rem;
+}
+
+/* MAKE ICON X BIGGER IN DROPDOWN MENU */
+
+#inputs-fields a.ui.label, 
+#inputs-fields a.ui.label.transition.visible  {
+    position: relative;
+    display: inline-block !important;
+    padding-right: 1.7rem;    
+    vertical-align: middle;
+}
+
+#inputs-fields a.ui.label > i.delete, 
+#inputs-fields a.ui.label.transition.visible > i.delete{
+   position: absolute;
+   right: 0.2rem;
+   font-size: 1.6rem;
+   top: 0.1rem
+}
+#menuCmdsSidebar {
+    overflow-x: hidden ;
+}
+/* CHANGE CANVAS */
+#ss > table > tr:nth-child(1) > td:nth-child(2) {position : absolute; right: 0;} 
+
+/* #ss > table > tr:nth-child(2) table td:nth-child(2) {
+    transform: scale(0.7);
+}  */
+/* 
+$('td')[9]
+POSITION: ABSOLUTE;
+    right: 0rem; 
+    
+position: absolute;
+    right: 0rem;   
+    
+    .scroll-container.scroll-corner-all.ui-widget.ui-corner-all
+    .scrollbar-wrapper
+    .scroll-bar.no-user-select.scroll-handle.ui-state-default.ui-corner-all.ui-draggable btn btn-default
+    */
+
+/* FOR DROPBOXES IN toggle({0,1}) */
+/* #autoFormula {
+  position: relative;
+  left : 0;
+} */
+.menu.OfficeUI_absolute {
+    left: 0;
+}
+
+.OfficeUI_nomargin {
+    margin-bottom: 6px;
+}
+
+.menu.OfficeUI_absolute {
+    width: 100%;
+}
+.submenu {
+    position: relative;
+}
+
+#autoFormula {
+    display: inline;
+    width: 45%;
+    float: right;
+}
+
+
+/* FABRIC */
+#data-input-window .ms-Dialog{
+    max-width: 60rem; 
+    width: 60rem;
+}
+
+.ms-Dropdown-truncator.ms-Dropdown-title {
+    display: none;
+}
+
+#advanced-options .ms-TextField > .ms-Label {
+    display: none;
+}
+
+.wrap__border {
+    /* background-color: rgb(250, 250, 250); */
+    border: 1px solid rgb(115, 115, 115);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+    margin: 2px 0px;
+
+}
+.wrap__border--adv {
+    /* border: 1px solid rgb(115, 115, 115); */
+    padding: 0.5rem 1rem;
+    /* border-radius: 0.5rem; */
+    margin: 2px 0px;
+    box-shadow: 0 0 5px 0 rgba(0,0,0,.4);
+}
+
+
+#data-has-row, #sheet-list {
+    display: inline-block;
+}
+
+#data-has-row--parent > label {
+    margin-right: 0.5rem;
+}
+
+/* #data-has-row > i {
+    display: none;
+} */
+
+#data-has-row--parent, #sheet-select {
+    display: inline-block;
+}
+
+#data-has-row--parent > label, #sheet-select > label {
+    margin-right: 0.5rem;
+    font-size: 1rem;
+}
+/* #data-has-row--parent > i, #sheet-select > i {
+    display: none;
+} */
+#data-input-window .ms-Button.ms-Dialog-action{
+    margin-left: 1.2rem;
+}
+
+#data-has-row, #sheet-list {
+    /* visibility: hidden; */
+    display: none;
+}
+
+
+#data-has-row--parent .ms-Dropdown-title{
+    display: block;
+    float: right;
+    width: 16rem;
+    text-align: left;
+}
+
+#data-has-row--parent li.ms-Dropdown-item{
+    text-align: left;
+}
+
+
+
+#data-has-row--parent .ms-Dropdown-truncator.ms-Dropdown-title, 
+#sheet-select .ms-Dropdown-truncator.ms-Dropdown-title{
+    display: none;
+}
+
+#data-has-row--parent {
+    display: block;
+    float: left;
+}
+
+#data-has-row--parent > label {
+   display: block;
+   float: left;
+  }
+
+#sheet-select .ms-Dropdown-title {
+    display: block;
+    float: right;
+}
+
+#columns-place {
+    margin-left: -8px;
+    margin-right: 1.3rem;
+}
+
+#inputs-fields .ms-Button{
+    min-width: 0;
+}
+
+#inputs-fields .ms-Button:not(:last-child) {
+    margin-right: 0.4rem;
+}
+
+.data-input-field > ul > li:empty {
+    display: none;
+}
+
+
